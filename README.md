@@ -1,6 +1,4 @@
-Fridae-Dotfiles
-
-A Hyprland configuration centered around dynamic color generation and the split-monitor-workspaces plugin.
+My Hyprland configuration centered around dynamic color generation and the split-monitor-workspaces plugin.
 Core Components
 
     Window Manager: Hyprland
@@ -89,4 +87,4 @@ The Ocean Script
 
 The ocean.sh script automates theme switching. It uses Matugen to generate colors from a wallpaper and uses JQ to inject those colors into Codium's settings.
 
-Usage: ./scripts/ocean.sh /path/to/wallpaper.png
+Usage: Super + W to open the walker menu to pick from wallpapers at ~/Walls/
