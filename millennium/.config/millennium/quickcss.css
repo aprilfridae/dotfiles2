@@ -17,7 +17,7 @@
     --littlegrey: #2b363b;
     
     --begrey: #3d484d;
-    --grey: #879298;
+    --grey: #879398;
     --grey-ish: #bdc8ce;
     --lightgrey: #bdc8ce;
     --lightergrey: #bdc8ce;
@@ -25,12 +25,12 @@
     /* --- TEXT & ACCENTS --- */
     --white: #d9e4ea;
     --darkwhite: #bdc8ce;
-    --darkerwhite: #879298;
+    --darkerwhite: #879398;
 
     /* --- STEAM SPECIFICS --- */
     /* We keep these somewhat standard so Steam still looks like Steam */
     --ingame: #90ba3c; /* Everforest green matches this well anyway */
-    --online: #53d5ff; /* Matches your system accent */
-    --offline: #879298;
+    --online: #50d5ff; /* Matches your system accent */
+    --offline: #879398;
     --scrollbar: #2b363b;
 }

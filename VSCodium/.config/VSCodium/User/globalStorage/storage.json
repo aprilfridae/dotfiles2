@@ -9,11 +9,7 @@
                 "folderUri": "file:///home/river/dotfiles2"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1770363312392"
-            }
-        ]
+        "emptyWindows": []
     },
     "windowControlHeight": 42,
     "profileAssociations": {
@@ -29,9 +25,7 @@
             "file:///home/river/.config/vesktop/themes": "__default__profile__",
             "file:///home/river/dotfiles2": "__default__profile__"
         },
-        "emptyWindows": {
-            "1770363312392": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "windowsState": {
         "lastActiveWindow": {
@@ -39,10 +33,10 @@
             "backupPath": "/home/river/.config/VSCodium/Backups/60ed3fa55ad89b0eaac80471f4cbfd5f",
             "uiState": {
                 "mode": 0,
-                "x": 2280,
-                "y": 140,
-                "width": 1200,
-                "height": 800,
+                "x": 0,
+                "y": 0,
+                "width": 1835,
+                "height": 1032,
                 "zoomLevel": 1
             }
         },

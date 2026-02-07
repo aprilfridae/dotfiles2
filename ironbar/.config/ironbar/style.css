@@ -2,12 +2,12 @@
 
 @define-color bg_pill rgba(10, 21, 25, 1);
 @define-color fg_main #d9e4ea;
-@define-color accent #53d5ff;
+@define-color accent #50d5ff;
 @define-color active_bg rgba(0, 77, 97, 1);
 
 /* Additional handy variables for GTK4 */
 @define-color error #ffb4ab;
-@define-color success #53d5ff;/* 1. THE NUCLEAR RESET */ 
+@define-color success #50d5ff;/* 1. THE NUCLEAR RESET */ 
  * { 
      all: unset; 
      /* Google Sans for text + Nerd Font for the icons */
