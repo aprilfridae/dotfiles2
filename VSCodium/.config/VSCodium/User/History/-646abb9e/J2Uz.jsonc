@@ -1,0 +1,38 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 10,
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "battery"],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+"wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+        "on-click": "activate", // <--- Check for this comma!
+        "rewrite": {
+            "dev.vencord.Vesktop": "vesktop",
+            "Vesktop": "vesktop" // <--- No comma here because it's the last one
+        }
+    }, // <--- This comma is needed if another module follows it
+}
+    "clock": {
+        "format": "{:%H:%M} "
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    }
+}

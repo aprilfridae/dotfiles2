@@ -1,0 +1,56 @@
+[config]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/hyprland-template.conf'
+output_path = '~/.cache/matugen/colors-hyprland.conf'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/gtk-template.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/gtk-template.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.ironbar]
+input_path = '/home/river/.config/matugen/ironbar-template.css'
+output_path = '/home/river/.config/ironbar/colors.css'
+
+[templates.kitty]
+input_path = '~/.config/matugen/kitty-template.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+[templates.codium]
+input_path = '~/.config/matugen/codium.json'
+output_path = '~/.cache/matugen/colors-codium.json'
+
+[templates.walker]
+input_path = '~/.config/matugen/walker.css.template'
+output_path = '~/.config/walker/themes/walker-global/style.css'
+
+[templates.swaync]
+input_path = '~/.config/matugen/swaync.css.template'
+output_path = '~/.config/swaync/style.css'
+
+[templates.firefox]
+input_path = '~/.config/matugen/firefox.css.template'
+output_path = '/home/river/dotfiles/hypr/.config/mozilla/firefox/1nl7dn42.default-release/chrome/colors.css'
+
+[templates.discord]
+input_path = '~/.config/matugen/midnight-discord.css'
+output_path = '~/.config/vesktop/themes/midnight-discord.css'
+
+[templates.fish]
+input_path = '~/.config/matugen/fish-template.conf'
+output_path = '~/.config/fish/conf.d/matugen_colors.fish'
+
+[templates.btop]
+input_path = '~/.config/matugen/btop-template.template'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+[templates.astal]
+input_path = '~/.config/matugen/astal-template.css'
+output_path = '~/.cache/astal/colors.css'
+
+
+

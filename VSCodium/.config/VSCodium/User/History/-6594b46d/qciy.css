@@ -1,0 +1,98 @@
+@import "../../.cache/matugen/colors-waybar.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 18px; 
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: transparent;
+    /* Removed the outer border and background tint */
+}
+
+/* --- THE MASTER PILLS --- */
+#workspaces, #taskbar, #clock, #battery, #cpu, #memory, #network, #custom-launcher {
+    background: rgba(15, 15, 15, 0.5); 
+    margin: 8px 4px; 
+    padding: 4px 15px; 
+    border-radius: 25px; 
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: @foreground;
+}
+
+/* --- LAUNCHER --- */
+#custom-launcher {
+    background-image: url("file:///home/river/.icons/logo.svg"); 
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 60px;
+    min-height: 40px;
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+    color: @color7;
+    background: transparent;
+    padding: 0 12px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 400; /* Use numeric weight */
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.1);
+    font-weight: 700; /* Set to 400 or 500 if 700 is too thick */
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+#workspaces button label {
+    font-weight: 400;
+}
+
+/* --- TASKBAR --- */
+#taskbar button {
+    background: transparent;
+    margin: 2px 4px;
+    padding: 0 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#taskbar button.active {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.1); 
+}
+
+#taskbar button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#taskbar button image {
+    opacity: 0.6;
+}
+
+#taskbar button.active image {
+    opacity: 1;
+}
+
+/* --- SYSTEM & CLOCK --- */
+#clock, #battery, #cpu, #memory, #network {
+    font-weight: normal;
+    color: @foreground;
+}
+
+#battery, #cpu, #memory, #network {
+    font-size: 15px;
+}

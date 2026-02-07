@@ -1,0 +1,64 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+}
+
+/* The main bar container */
+.ironbar {
+    background-color: transparent;
+}
+
+/* Ironbar uses class names like .widget, .clock, .workspaces.
+   This replaces your old #workspaces, #clock, etc. 
+*/
+.launcher,
+.workspaces,
+.clock,
+.volume,
+.network,
+.bluetooth,
+.tray {
+    background-color: @bg_pill;
+    margin: 5px 4px;
+    padding: 2px 12px;
+    border-radius: 25px;
+    border: 2px solid @accent;
+    color: @fg_main;
+}
+
+/* Launcher Icon (Thinkpad Logo) */
+.launcher {
+    /* Using your path from the Waybar config */
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 45px;
+}
+
+/* Workspace styling to match your 'active' vs 'empty' icons */
+.workspaces button {
+    color: alpha(@fg_main, 0.4);
+    background: transparent;
+}
+
+.workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.1);
+}
+
+.workspaces button:hover {
+    background: alpha(@accent, 0.2);
+}
+
+/* Tooltip/Popup Styling */
+.popup {
+    background-color: @bg_pill;
+    border: 2px solid @accent;
+    border-radius: 15px;
+    padding: 10px;
+}

@@ -1,0 +1,43 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+}
+
+/* Hide the main bar strip */
+.background {
+    background: transparent;
+}
+
+/* TARGET THE INNER BOX
+   This forces the background and border onto the module wrapper
+*/
+.launcher > box,
+.workspaces > box,
+.volume > box,
+.network > box,
+.bluetooth > box,
+.clock > box,
+.tray > box {
+    background-color: @bg_pill;
+    border: 2px solid @accent;
+    border-radius: 25px;
+    margin: 5px 4px;
+    padding: 2px 12px;
+    color: @fg_main;
+}
+
+/* THE LAUNCHER ICON FIX
+   We use min-height and min-width to ensure the box doesn't collapse to 0px
+*/
+.launcher > box {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 44px;
+    min-height: 24px;
+}

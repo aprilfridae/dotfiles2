@@ -1,0 +1,23 @@
+[monitors.default]
+position = "top"
+height = 34
+margin_top = 5
+margin_left = 15
+margin_right = 15
+# This is key: it stops the bar from being one solid block
+anchor_to_edges = false 
+
+start = [
+  { type = "custom", name = "launcher", content = " ", on_click_left = "walker" }
+]
+
+center = [
+  { type = "workspaces", name = "workspaces" }
+]
+
+end = [
+  { type = "tray", name = "tray" },
+  { type = "volume", name = "volume", format = "{icon} {percentage}%" },
+  { type = "network", name = "network", on_click_left = "walker -m network" },
+  { type = "clock", name = "clock", format = "󱑂 %H:%M" }
+]

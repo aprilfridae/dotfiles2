@@ -1,0 +1,36 @@
+:root {
+    /* --- MAIN BACKGROUNDS --- */
+    /* The core "Steam" look: Darkest to Lightest Surfaces */
+    --color-darkest: #0a1519;           /* Main deep background */
+    --color-darker: #121d21;
+    --color-dark: #162126;    /* Titlebars and Library divs */
+    --color-light: #212c30; /* Buttons and highlights */
+
+    /* --- GREY SCALE (Used for panels, borders, and inputs) --- */
+    --black: #000000; /* Usually safe to keep pure black for shadows */
+    --blacker: #0a1519;
+    --blacker-ish: #051014;
+    
+    --darkergrey: #121d21;
+    --thegrey: #162126;
+    --darkgrey: #212c30;
+    --littlegrey: #2b363b;
+    
+    --begrey: #3d484d;
+    --grey: #879298;
+    --grey-ish: #bdc8ce;
+    --lightgrey: #bdc8ce;
+    --lightergrey: #bdc8ce;
+
+    /* --- TEXT & ACCENTS --- */
+    --white: #d9e4ea;
+    --darkwhite: #bdc8ce;
+    --darkerwhite: #879298;
+
+    /* --- STEAM SPECIFICS --- */
+    /* We keep these somewhat standard so Steam still looks like Steam */
+    --ingame: #90ba3c; /* Everforest green matches this well anyway */
+    --online: #53d5ff; /* Matches your system accent */
+    --offline: #879298;
+    --scrollbar: #2b363b;
+}

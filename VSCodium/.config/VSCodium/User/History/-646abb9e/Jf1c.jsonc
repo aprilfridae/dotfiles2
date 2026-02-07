@@ -1,0 +1,77 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 10,
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "network",
+        "cpu",
+        "memory",
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 32,
+        "on-click": "activate",
+        "rewrite": {
+            "dev.vencord.Vesktop": "vesktop",
+            "Vesktop": "vesktop",
+            "Firefox": "firefox"
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}  "
+    },
+
+    "cpu": {
+        "format": "{usage}%  ",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "{}% "
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    "network": {
+        "format-wifi": "{essid} ",
+        "format-ethernet": "Connected 󰈀",
+        "format-disconnected": "Disconnected ⚠",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "on-click": "nm-connection-editor"
+    },
+
+    "tray": {
+        "icon-size": 32,
+        "spacing": 10
+    },
+
+    "custom/power": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "wlogout"
+    }
+}

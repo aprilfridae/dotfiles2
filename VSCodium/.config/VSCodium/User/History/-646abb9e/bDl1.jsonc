@@ -1,0 +1,50 @@
+{
+    "name": "waybar",
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "height": 34, 
+    "margin-top": 8,
+    "margin-left": 15,
+    "margin-right": 15,
+    "spacing": 0,
+
+    "modules-left": ["custom/launcher"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "clock"],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󱓻",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M}"
+    }
+}

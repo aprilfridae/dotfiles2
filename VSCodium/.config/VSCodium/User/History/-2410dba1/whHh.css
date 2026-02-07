@@ -1,0 +1,46 @@
+/**
+ * @name Obsidian-Matugen
+ * @author Gemini
+ * @description Syncs Vesktop with Obsidian colors via Matugen
+*/
+
+@import url("file:///home/river/cache/matugen/discord.css");
+
+.theme-dark, .theme-light {
+    --header-primary: var(--fg_main);
+    --header-secondary: var(--fg_muted);
+    --text-normal: var(--fg_main);
+    --text-muted: var(--fg_muted);
+    
+    /* Backgrounds */
+    --background-primary: var(--bg_main);
+    --background-secondary: var(--bg_secondary);
+    --background-tertiary: var(--bg_main);
+    --background-floating: var(--bg_secondary);
+    
+    /* Accents */
+    --brand-experiment: var(--accent);
+    --brand-experiment-560: var(--accent);
+    --button-filled-brand-background: var(--accent);
+}
+
+/* Make it look cleaner */
+.container_ee6116 { background-color: var(--bg_main) !important; } /* Channel list */
+
+/* Force Usernames and Channel Names to be visible */
+.username_f9f2ca, 
+.channelName_d8bfb3,
+.name_d8bfb3 {
+    color: var(--fg_main) !important;
+    opacity: 1 !important;
+}
+
+/* Maintain the Role Colors if people have them */
+.roleColor-87Z9sH {
+    opacity: 1 !important;
+}
+
+/* Fix for the Message Text itself */
+.markup_f8757d {
+    color: var(--fg_main);
+}

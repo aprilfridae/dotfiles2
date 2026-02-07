@@ -1,0 +1,70 @@
+/* 1. THE NUCLEAR RESET - Forcing everything to be flat/invisible by default */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* 2. THE BAR BASE */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 10px;
+}
+
+/* 3. BIG LOGO (No GTK styles allowed) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 36px;
+    min-height: 24px;
+    margin-right: 12px;
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 4. THE RIGHT SIDE (#end) - Sizing and Spacing */
+#end .widget, #end .button, #end .tray {
+    margin-left: 10px; /* Brought closer to fix the 'drifting' network */
+}
+
+#end label, #end image {
+    font-size: 16px;
+    transition: color 0.2s ease-in-out;
+}
+
+.clock {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/* 5. ISOLATED ACCENT HOVER */
+/* We target the hover state but only change the color of the label/icon */
+#end .widget:hover label,
+#end .widget:hover image,
+#end .button:hover label,
+#end .tray .item:hover label,
+#end .tray .item:hover image,
+.clock:hover {
+    color: @accent;
+}
+
+/* 6. SYSTEM TRAY SPECIFICS - Kill any GTK padding/backgrounds */
+.tray .item {
+    margin: 0 2px;
+    padding: 0;
+    background: transparent;
+}
+
+/* 7. POPOVERS & MENUS - Strictly Borderless per instructions */
+popover contents, .menu, .decoration, menu {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}

@@ -1,0 +1,35 @@
+position = "top"
+height = 24
+anchor_to_edges = true
+margin_top = 60
+margin_start = 19
+margin_end = 19
+
+[[start]]
+type = "custom"
+bar = [
+    { type = "button", label = "", name = "launcher", on_click = "!walker" }
+]
+
+[[start]]
+type = "workspaces"
+name_map = { "1" = "●", "2" = "●", "3" = "●", "4" = "●", "5" = "●", "6" = "●", "7" = "●", "8" = "●", "9" = "●", "10" = "●" }
+all_monitors = false
+
+[[center]]
+type = "clock"
+format = "%a %b %d  %I:%M %p"
+on_click_left = "none"
+
+[[end]]
+type = "tray"
+icon_size = 14
+
+[[end]]
+type = "network_manager"
+icon_size = 14
+
+[[end]]
+type = "volume"
+max_volume = 100.0
+format = "{icon}"

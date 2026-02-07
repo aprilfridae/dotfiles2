@@ -1,0 +1,38 @@
+/* Matugen Colors for Zen */
+:root {
+  /* Main Surfaces */
+  --zen-primary: {{colors.primary.default.hex}};
+  --zen-on-primary: {{colors.on_primary.default.hex}};
+  --zen-background: {{colors.surface.default.hex}};
+  --zen-sidebar-bg: {{colors.surface_container.default.hex}};
+  --zen-text: {{colors.on_surface.default.hex}};
+  
+  /* Accent & Interaction */
+  --zen-accent: {{colors.secondary.default.hex}};
+  --zen-urlbar-bg: {{colors.surface_container_high.default.hex}};
+}
+
+/* Force Apply to Zen's UI Elements */
+#nav-bar, #TabsToolbar, #titlebar {
+  background-color: var(--zen-background) !important;
+  color: var(--zen-text) !important;
+}
+
+#sidebar-box {
+  background-color: var(--zen-sidebar-bg) !important;
+}
+
+/* Color the active tab to match your primary theme color */
+.tab-background[selected="true"] {
+  background-color: var(--zen-primary) !important;
+}
+
+.tab-label[selected="true"] {
+  color: var(--zen-on-primary) !important;
+}
+
+/* URL Bar styling */
+#urlbar-background {
+  background-color: var(--zen-urlbar-bg) !important;
+  border: 1px solid {{colors.outline.default.hex}}44 !important;
+}

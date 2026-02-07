@@ -1,0 +1,54 @@
+[config]
+# Global configuration options can go here
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland.conf'
+output_path = '~/.cache/matugen/hyprland.conf'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.cache/matugen/gtk3.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.cache/matugen/gtk4.css'
+
+[templates.ironbar]
+input_path = '~/.config/matugen/templates/ironbar.css'
+output_path = '~/.cache/matugen/ironbar.css'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf'
+output_path = '~/.cache/matugen/kitty.conf'
+
+[templates.walker]
+input_path = '~/.config/matugen/templates/walker.css'
+output_path = '~/.cache/matugen/walker.css'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/swaync.css'
+output_path = '~/.cache/matugen/swaync.css'
+
+[templates.discord]
+input_path = '~/.config/matugen/templates/discord.css'
+output_path = '~/.config/vesktop/midnight-discord.css'
+
+[templates.fish]
+input_path = '~/.config/matugen/templates/fish.conf'
+output_path = '~/.cache/matugen/fish.conf'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+[templates.spotify]
+input_path = '~/.config/matugen/templates/spicetify.ini'
+output_path = '~/.config/spicetify/Themes/text/color.ini'
+
+[templates.zen]
+input_path = '~/.config/matugen/templates/zen.css'
+output_path = '~/.cache/matugen/zen.css'
+
+[templates.steam]
+input_path = '~/.config/matugen/templates/steam.css'
+output_path = '~/.config/millennium/quickcss.css'

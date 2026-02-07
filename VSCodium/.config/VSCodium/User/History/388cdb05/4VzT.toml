@@ -1,0 +1,22 @@
+# Walker Config (TOML)
+theme = "default"
+terminal = "kitty"
+orientation = "vertical"
+fullscreen = false
+width = 450
+height = 500
+ignore_exclusive = true
+placeholder = "Search..."
+
+[[modules]]
+name = "applications"
+type = "applications"
+
+[[modules]]
+name = "runner"
+type = "sh"
+prefix = "!"
+
+# This connects to the service you built
+[external_modules]
+elephant = "elephant"

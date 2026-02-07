@@ -1,0 +1,80 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 12px;
+}
+
+/* 3. BIG LOGO (Left) - Kept the scale animation you liked */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+    min-height: 24px;
+    margin-right: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { 
+    transform: scale(1.15); 
+}
+
+/* 4. WORKSPACES - Nicely Spaced */
+.workspaces .item {
+    padding: 0 10px;
+}
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 15px;
+    transition: color 0.4s ease-in-out; /* Keeps the workspace fade */
+}
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. THE RIGHT SIDE (#end) - Big & Nicely Spaced */
+/* No more hover colors here to keep it from getting weird */
+#end .widget, 
+#end .button, 
+#end .tray {
+    margin-left: 28px; /* Big, consistent gap */
+}
+
+/* Internal tray icon spacing */
+.tray .item {
+    margin-left: 16px;
+}
+
+/* Icon Sizing */
+#end label, #end image {
+    font-size: 19px; /* Big icons as requested */
+    color: @fg_main;
+}
+
+.clock {
+    font-weight: 900;
+    font-size: 15px;
+    color: @fg_main;
+}
+
+/* 6. POPOVERS - Strictly Borderless */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* Explicitly killing any leftover GTK hover effects */
+#end .widget:hover, #end .button:hover, .tray .item:hover {
+    background: transparent;
+    color: @fg_main;
+}

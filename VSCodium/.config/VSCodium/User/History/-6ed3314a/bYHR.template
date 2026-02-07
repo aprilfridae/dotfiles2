@@ -1,0 +1,20 @@
+/* Add this at the top of your template */
+.notification {
+    /* Controls the smooth fade and slide transition inside the widget */
+    transition: all 0.3s ease-in-out;
+    background: alpha(@bg, 0.8);
+    border: 2px solid @accent;
+    border-radius: 12px;
+    color: @fg;
+    padding: 10px;
+}
+
+/* This handles the "Fading out" animation when a notification is closed */
+.notification-row.low {
+    transition: all 0.2s ease-in-out;
+}
+
+.notification-row:removed {
+    transform: translateX(100%); /* Slides it off-screen to the right */
+    opacity: 0;
+}

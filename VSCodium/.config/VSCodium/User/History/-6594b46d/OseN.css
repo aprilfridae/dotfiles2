@@ -1,0 +1,62 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* THE MAIN PILL */
+window#waybar > box {
+    /* 0.6 alpha to ensure it stays above your 0.5 ignore_alpha rule */
+    background-color: alpha(@bg_pill, 0.6); 
+    
+    /* Increased horizontal padding to make the pill wider */
+    padding: 4px 30px; 
+    margin: 10px 15px; 
+    
+    border-radius: 25px; 
+    border: 2px solid @accent; 
+    color: @fg_main;
+    
+    /* Helps Hyprland identify the area to blur */
+    background-clip: padding-box;
+}
+
+/* This pushes the modules apart to fill the width */
+.modules-left {
+    margin-right: 20px;
+}
+
+.modules-right {
+    margin-left: 20px;
+}
+
+#custom-launcher {
+    background-image: url("/home/river/.icons/logo.png"); 
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 45px;
+}
+
+#workspaces button {
+    color: alpha(@fg_main, 0.6);
+    padding: 0 15px; /* Wider workspace buttons */
+}
+
+#workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.2);
+    border-radius: 15px;
+}
+
+#tray, #pulseaudio, #clock {
+    padding: 0 12px;
+}

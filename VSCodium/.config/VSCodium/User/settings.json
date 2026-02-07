@@ -1,0 +1,26 @@
+{
+  "workbench.colorTheme": "Material Code",
+  "material-code.colors": {
+    "primary": "#53d5ff",
+    "foreground": "#d9e4ea",
+    "mutedForeground": "#bdc8ce",
+    "background": "#0a1519",
+    "card": "#162126",
+    "popover": "#212c30",
+    "hover": "#2b363b",
+    "border": "#3d484d",
+    "primaryForeground": "#003544",
+    "secondary": "#2c4a60",
+    "secondaryForeground": "#cae6ff",
+    "error": "#ffb4ab",
+    "errorForeground": "#690005",
+    "success": "#53d5ff",
+    "warning": "#abc8f7",
+    "syntax.comment": "#879298",
+    "syntax.keyword": "#abc8f7",
+    "syntax.variable": "#d9e4ea",
+    "syntax.function": "#53d5ff",
+    "syntax.string": "#accae5",
+    "syntax.constant": "#004d61"
+  }
+}

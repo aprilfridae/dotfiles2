@@ -1,0 +1,204 @@
+/* Matugen Colors for Zen */
+:root {
+  --zen-primary: {{colors.primary.default.hex}};
+  --zen-background: {{colors.surface.default.hex}};
+  --zen-sidebar-bg: {{colors.surface_container.default.hex}};
+  --zen-urlbar-bg: {{colors.surface_container_high.default.hex}};
+  --zen-text: {{colors.on_surface.default.hex}};
+}
+
+/* 1. THE MAIN BACKGROUND FIX */
+/* This targets the area behind the website and the "New Tab" page */
+#main-window, 
+#browser, 
+.browserStack, 
+#tabbrowser-tabpanels {
+    background-color: var(--zen-background) !important;
+}
+
+/* 2. THE TOP BAR & NAV */
+#nav-bar, 
+#navigator-toolbox, 
+#TabsToolbar {
+    background-color: var(--zen-background) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 3. THE SIDEBAR FIX */
+/* Zen uses a specific box for its vertical tabs/sidebar */
+#sidebar-box, 
+#sidebar-header, 
+#zen-sidebar-header {
+    background-color: var(--zen-sidebar-bg) !important;
+}
+
+/* 4. URL BAR */
+#urlbar-background {
+    background-color: var(--zen-urlbar-bg) !important;
+}
+
+/* 5. FIX FOR 'NEW TAB' PAGE (The most stubborn part) */
+@-moz-document url("about:newtab"), url("about:home"), url("about:blank") {
+    body {
+        background-color: var(--zen-background) !important;
+    }
+}
+
+/* ... keep your previous variables at the top ... */
+
+/* 1. REMOVE BOUNDING BOX BORDERS */
+/* This kills the grey lines around the URL bar and the main website view */
+#zen-main-app-wrapper,
+#zen-appcontent-wrapper,
+.browserStack,
+#nav-bar,
+#navigator-toolbox,
+#sidebar-box {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 2. UNIFY CONTAINER COLORS */
+/* Zen wraps the website in several layers; we need them all to be the same hex */
+#tabbrowser-tabpanels,
+#tabbrowser-tabpanels > hbox,
+.deck-selected {
+    background-color: var(--zen-background) !important;
+}
+
+/* 3. THE URL BAR "FLOATING" BOX FIX */
+/* Zen's URL bar often has a container that stays grey */
+#urlbar {
+    --urlbar-box-bgcolor: var(--zen-urlbar-bg) !important;
+}
+
+#urlbar-background {
+    background-color: var(--zen-urlbar-bg) !important;
+    border: 1px solid {{colors.outline_variant.default.hex}} !important;
+}
+
+/* 4. REMOVE SEPARATION MARGINS (Optional) */
+/* If you want the website to touch the edges without a "gap" */
+:root {
+    --zen-element-separation: 0px !important;
+    --zen-view-padding: 0px !important;
+}
+
+/* 5. FIX THE SIDEBAR SEPARATOR */
+/* That vertical grey line between the tabs and the website */
+#sidebar-splitter {
+    display: none !important;
+}
+
+/* 1. Kill the Sidebar Splitter sliver */
+#sidebar-splitter {
+    width: 0px !important;
+    background-color: transparent !important;
+    border: none !important;
+    opacity: 0 !important;
+}
+
+/* 2. Force the sidebar to touch the browser content */
+#browser {
+    column-gap: 0px !important;
+}
+
+/* 3. Remove the container's internal shadow/border that looks like a sliver */
+#zen-appcontent-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+/* 4. Target the 'tabbox' wrapper which Zen uses for layout */
+#zen-tabbox-wrapper {
+    border-left: none !important;
+    margin-left: 0 !important;
+}
+
+/* 5. Override the 'element-separation' specifically for the sidebar */
+:root {
+    --zen-sidebar-content-separation: 0px !important;
+}
+
+/* 1. Kill the Workspace Indicator (The most common "sliver" culprit) */
+#zen-current-workspace-indicator,
+.zen-workspace-indicator {
+    display: none !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* 2. Remove the 'Element Separation' from the layout engine */
+#zen-main-app-wrapper {
+    gap: 0 !important;
+    --zen-element-separation: 0px !important;
+    --zen-content-separation: 0px !important;
+}
+
+/* 3. The "Sliver" Splitter Fix */
+#zen-sidebar-splitter, 
+#sidebar-splitter {
+    display: none !important;
+    width: 0px !important;
+    min-width: 0px !important;
+    max-width: 0px !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/* 4. Force Content to fill the gap */
+#zen-appcontent-wrapper,
+#tabbrowser-tabpanels {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    border-left: none !important;
+}
+
+/* 5. Target the 'Tabbox' specifically */
+#zen-tabbox-wrapper {
+    margin-right: 0 !important;
+    border-right: none !important;
+}
+
+/* 1. Target the Floating URL Bar Container */
+#urlbar-container {
+    --urlbar-container-height: 40px !important;
+}
+
+/* 2. Style the Floating URL bar itself */
+#urlbar[open] > #urlbar-background {
+    background-color: var(--zen-urlbar-bg) !important;
+    border: 1px solid {{colors.primary.default.hex}} !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    backdrop-filter: blur(10px) !important; /* Optional: adds a nice blur */
+}
+
+/* 3. Style the Search Results (The dropdown part) */
+.urlbarView {
+    background-color: var(--zen-background) !important;
+    color: var(--zen-text) !important;
+    border: 1px solid {{colors.outline_variant.default.hex}} !important;
+    border-top: none !important;
+    margin-top: -1px !important;
+}
+
+/* 4. Highlight the currently selected search result */
+.urlbarView-row[selected] {
+    background-color: var(--zen-primary) !important;
+    color: var(--zen-on-primary) !important;
+}
+
+/* 5. Style the Search/URL text input */
+#urlbar-input {
+    color: var(--zen-text) !important;
+}
+
+/* 6. Hide the "Search with Google" labels if you want a cleaner look */
+.urlbarView-row[type="search"] .urlbarView-action {
+    color: var(--zen-accent) !important;
+}

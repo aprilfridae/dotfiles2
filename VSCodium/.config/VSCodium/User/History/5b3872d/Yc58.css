@@ -1,0 +1,101 @@
+/* Walker 2 Obsidian x Matugen Template */
+@define-color window_bg_color {{colors.surface.default.hex}};
+@define-color accent_bg_color {{colors.primary.default.hex}};
+@define-color theme_fg_color {{colors.on_surface.default.hex}};
+@define-color error_bg_color {{colors.error.default.hex}};
+@define-color error_fg_color {{colors.on_error.default.hex}};
+
+/* Force Transparency for Walker 2 / GTK4 Layer Shell */
+window, #window {
+    background: transparent;
+}
+
+* {
+    all: unset;
+}
+
+/* Your Request: No borders for popovers */
+popover {
+    background: alpha(@window_bg_color, 0.95);
+    border: none;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+.box-wrapper {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background: alpha(@window_bg_color, 0.85); /* Obsidian Transparency */
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid alpha(@accent_bg_color, 0.3);
+}
+
+.input {
+    caret-color: @theme_fg_color;
+    background: alpha(@window_bg_color, 0.5);
+    padding: 10px;
+    color: @theme_fg_color;
+    border-radius: 10px;
+}
+
+.input selection {
+    background: alpha(@accent_bg_color, 0.4);
+}
+
+/* Items and Selection */
+.item-box {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+child:selected .item-box {
+    background: alpha(@accent_bg_color, 0.25);
+}
+
+.item-quick-activation {
+    background: alpha(@accent_bg_color, 0.25);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Text and Previews */
+.list, .preview-box, .elephant-hint, .placeholder {
+    color: @theme_fg_color;
+}
+
+.item-subtext {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.preview {
+    border: 1px solid alpha(@accent_bg_color, 0.25);
+    border-radius: 10px;
+    color: @theme_fg_color;
+}
+
+/* Keybinds Styling */
+.keybinds {
+    padding-top: 10px;
+    border-top: 1px solid alpha(@theme_fg_color, 0.1);
+    font-size: 12px;
+    color: @theme_fg_color;
+}
+
+.keybind-label {
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid @theme_fg_color;
+}
+
+/* Icons and Utilities */
+.normal-icons { -gtk-icon-size: 16px; }
+.large-icons { -gtk-icon-size: 32px; }
+.preview .large-icons { -gtk-icon-size: 64px; }
+scrollbar { opacity: 0; }
+
+.error {
+    padding: 10px;
+    background: @error_bg_color;
+    color: @error_fg_color;
+}

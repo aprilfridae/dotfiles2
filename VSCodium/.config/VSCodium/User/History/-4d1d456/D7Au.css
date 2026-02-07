@@ -1,0 +1,153 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Remove the main container pill styling */
+.background {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Individual pills for each section using ID selectors */
+#start, #center, #end {
+    background-color: alpha(@bg_pill, 0.3);
+    border: 2px solid @accent;
+    border-radius: 24px;
+    padding: 0 12px;
+    margin: 0 6px;
+}
+
+/* Add extra spacing for edge pills */
+#start {
+    margin-left: 21px;
+}
+
+#end {
+    margin-right: 21px;
+}
+
+/* Remove all default button/label styling */
+button, label {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: @fg_main;
+}
+
+/* Launcher Logo Button */
+#launcher {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    min-width: 22px;
+    min-height: 22px;
+    margin: 0 4px 0 0;
+    padding: 0;
+    border: none;
+}
+
+#launcher label {
+    opacity: 0;
+}
+
+/* WORKSPACES: Clean dots without boxes */
+.workspaces {
+    background: transparent;
+}
+
+.workspaces .item {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 4px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.3);
+    font-size: 14px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* The focused workspace: stretch horizontally but keep same height */
+.workspaces .item.focused label {
+    color: @accent;
+    font-size: 14px;
+    transform: scaleX(2.5);
+}
+
+/* Visible workspace (on other monitors) */
+.workspaces .item.visible label {
+    color: alpha(@accent, 0.6);
+}
+
+.workspaces .item:hover label {
+    color: alpha(@accent, 0.8);
+}
+
+/* Clock styling */
+.clock {
+    font-weight: 600;
+    padding: 0 12px;
+    color: @fg_main;
+}
+
+/* System tray icons */
+.tray {
+    padding: 0 4px;
+}
+
+.tray .item {
+    padding: 0 4px;
+    background: transparent;
+}
+
+/* Network, Bluetooth, Volume buttons */
+.network_manager, .bluetooth, .volume {
+    padding: 0 6px;
+    min-width: 20px;
+    color: @fg_main;
+}
+
+.network_manager .icon, .bluetooth .icon, .volume .icon {
+    color: @fg_main;
+    -gtk-icon-size: 14px;
+}
+
+.volume:hover, .bluetooth:hover, .network_manager:hover {
+    background-color: alpha(@accent, 0.2);
+    border-radius: 8px;
+}
+
+/* GTK4 Popover Styling - Match the bar pills */
+popover {
+    background: transparent;
+}
+
+popover > contents {
+    background-color: alpha(@bg_pill, 0.3);
+    border: 2px solid @accent;
+    border-radius: 12px;
+    box-shadow: none;
+    padding: 12px;
+    min-width: 200px;
+    min-height: 100px;
+}
+
+popover > arrow {
+    background: transparent;
+    border: transparent;
+    min-height: 0;
+    min-width: 0;
+}
+
+

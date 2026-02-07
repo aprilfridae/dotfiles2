@@ -1,0 +1,22 @@
+#window {
+    background: none; /* Allows Hyprland blur to work */
+}
+
+#box {
+    background-color: @theme_bg_color;
+    border: 2px solid @theme_selected_bg_color;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+#search {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    border-radius: 8px;
+}
+
+#item:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    border-radius: 6px;
+}

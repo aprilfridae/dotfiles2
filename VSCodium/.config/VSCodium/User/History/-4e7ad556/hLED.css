@@ -1,0 +1,29 @@
+/* --- THE FIREFOX GLASS TRANSFORMATION --- */
+
+/* Make the main window transparent */
+#main-window,
+#browser-panel,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+browser {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Remove the solid background from the web content area */
+#content-deck, 
+#browser {
+    background: transparent !important;
+}
+
+/* Optional: Make the URL bar slightly visible so you can see it */
+#urlbar-background {
+    background: rgba(15, 15, 15, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Make tabs slightly dark so they pop */
+.tab-background[selected="true"] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}

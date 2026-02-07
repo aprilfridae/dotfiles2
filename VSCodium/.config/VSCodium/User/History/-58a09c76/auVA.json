@@ -1,0 +1,47 @@
+{
+  "material-code.colors": {
+    // All fields are optional. Unset colors are derived from primary
+    "primary": "#adc6ff",
+
+    "foreground": "#dfe2ef",
+    "mutedForeground": "#c3c6d3",
+    "background": "#0f131c",
+    // Elevated panel
+    "card": "#1c2029",
+    // Dialog, dropdown
+    "popover": "#262a33",
+    // Hover, selected
+    "hover": "#31353f",
+    // Input border, divider
+    "border": "#434751",
+    "primaryForeground": "#002e69",
+    // Tonal button, tooltip
+    "secondary": "#414465",
+    "secondaryForeground": "#dfe0ff",
+    "error": "",
+    "errorForeground": "",
+    // Success indicators, green terminal colors
+    "success": "",
+    // Warning indicators, yellow terminal colors
+    "warning": "",
+    "syntax.comment": "",
+    "syntax.string": "",
+    // Keywords, operators, control flow
+    "syntax.keyword": "",
+    // Variables, tags, HTML elements
+    "syntax.variable": "",
+    // HTML attributes, CSS selectors
+    "syntax.attribute": "",
+    // Object properties, CSS properties
+    "syntax.property": "",
+    // Functions, methods, CSS values
+    "syntax.function": "",
+    // Numbers, constants, types
+    "syntax.constant": "",
+    // Bracket pair colors
+    "syntax.bracket1": "",
+    "syntax.bracket2": "",
+    "syntax.bracket3": "",
+    "syntax.bracket4": ""
+  }
+}

@@ -1,0 +1,42 @@
+/* ~/.config/ironbar/style.css */
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+/* Ironbar's main container */
+.ironbar {
+    background: transparent;
+}
+
+/* Targeting all your "Pills" */
+.launcher, .workspaces, .clock, .volume, .tray {
+    background: var(--bg_pill); 
+    margin: 5px 4px;
+    padding: 2px 12px;
+    border-radius: 25px; 
+    border: 2px solid var(--accent); 
+    color: var(--fg_main);
+}
+
+/* Your specific launcher icon */
+.launcher {
+    background-image: url("file:///home/river/.icons/logo.png"); 
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 45px;
+}
+
+/* Workspace buttons */
+.workspaces button {
+    color: alpha(var(--fg_main), 0.6);
+    border-radius: 20px;
+}
+
+.workspaces .item.active {
+    color: var(--accent);
+    background: alpha(var(--accent), 0.2);
+}

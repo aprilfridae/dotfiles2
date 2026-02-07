@@ -1,0 +1,49 @@
+@import "/home/river/.cache/matugen/colors-wofi.css";
+
+* {
+    /* This strips the 'ugly' default GTK styling */
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    transition: 0.2s; /* Makes selection feel smoother */
+}
+
+#window {
+    /* 0.85 opacity for that glass look. Adjust 'bf' to change transparency */
+    background-color: @background; 
+    color: @foreground;
+    border-radius: 15px;
+    border: none; /* Removes the harsh border */
+}
+
+#outer-box {
+    margin: 10px;
+    border: none;
+}
+
+#input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: @selection;
+    color: @foreground;
+    /* Optional: a very subtle border just for the search bar */
+    border: 1px solid @primary; 
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#entry:selected {
+    background-color: @primary; /* Using primary here makes the 'Ocean' blue pop */
+    color: @background;
+}
+
+#text:selected {
+    color: @background;
+}

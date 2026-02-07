@@ -1,0 +1,68 @@
+@import "colors.css";
+
+/* Global Reset */
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+/* Outer Window: Must be transparent for Hyprland to see the 'layer' */
+window#waybar {
+    background: transparent;
+}
+
+/* THE UNIFIED PILL 
+   Targets the main box inside the bar. 
+   Using 0.6 alpha so it stays above your 'ignore_alpha 0.5' rule. */
+window#waybar > box {
+    background-color: alpha(@bg_pill, 0.6); 
+    border: 2px solid @accent;
+    border-radius: 25px;
+    margin: 0px; /* Controlled by margin-top/left/right in config.jsonc */
+    padding: 2px 20px;
+    background-clip: padding-box; /* Critical for blur consistency */
+}
+
+/* LAUNCHER: Clean and matched to your logo path */
+#custom-launcher {
+    background-image: url("/home/river/.icons/logo.png"); 
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+}
+
+/* WORKSPACES: Centered in the pill */
+#workspaces button {
+    color: alpha(@fg_main, 0.6);
+    padding: 0 10px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: @accent;
+}
+
+#workspaces button:hover {
+    color: @accent;
+}
+
+/* RIGHT MODULES */
+#tray {
+    padding-right: 15px;
+}
+
+#pulseaudio {
+    padding-right: 15px;
+    color: @accent;
+}
+
+#clock {
+    color: @fg_main;
+    font-weight: bold;
+}

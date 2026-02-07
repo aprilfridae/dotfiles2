@@ -1,0 +1,39 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+/* Style the whole bar as one rounded pill */
+.background {
+    background-color: @bg_pill;
+    border: 2px solid @accent;
+    border-radius: 25px;
+    padding: 0 10px;
+}
+
+/* Launcher Icon */
+.launcher {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+    margin-right: 10px;
+}
+
+/* Workspace Dots */
+.workspaces button {
+    background: transparent;
+    color: alpha(@fg_main, 0.3);
+}
+
+.workspaces button.active {
+    color: @accent;
+}
+
+/* Add some space between modules inside the pill */
+.widget {
+    margin: 0 8px;
+}

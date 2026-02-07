@@ -1,0 +1,69 @@
+/* 1. THE BAR BASE */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 10px;
+}
+
+/* 2. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 36px;
+    min-height: 24px;
+    margin-right: 12px;
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 3. THE RIGHT SIDE WIDGETS (#end) */
+#end .widget, #end .button, #end .tray {
+    margin-left: 12px; /* Uniform spacing */
+}
+
+/* THE NETWORK FIX: If your network module has a specific name or class, 
+   we can force its margin to be smaller to "pull it back" */
+.network {
+    margin-left: 6px !important; 
+}
+
+/* 4. SURGICAL HOVER - This prevents the "Whole Side" from turning accent */
+/* We target the actual label/image inside the widget so hover is isolated */
+
+#end .widget:hover label,
+#end .widget:hover image,
+#end .button:hover label,
+#end .tray .item:hover, 
+.clock:hover {
+    color: @accent;
+    /* This ensures only the specific item turns color */
+}
+
+/* 5. SIZE BUMP FOR RIGHT SIDE */
+#end label, #end image {
+    font-size: 16px;
+    transition: color 0.2s ease-in-out;
+}
+
+.clock {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/* 6. SYSTEM TRAY SPECIFICS */
+/* Ensuring individual tray icons are sized and spaced */
+.tray .item {
+    margin: 0 4px;
+    padding: 0 2px;
+}
+
+/* 7. POPOVERS (Keeping your borderless preference) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}

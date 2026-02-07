@@ -1,0 +1,36 @@
+:root {
+    /* --- MAIN BACKGROUNDS --- */
+    /* The core "Steam" look: Darkest to Lightest Surfaces */
+    --color-darkest: {{colors.surface.default.hex}};           /* Main deep background */
+    --color-darker: {{colors.surface_container_low.default.hex}};
+    --color-dark: {{colors.surface_container.default.hex}};    /* Titlebars and Library divs */
+    --color-light: {{colors.surface_container_high.default.hex}}; /* Buttons and highlights */
+
+    /* --- GREY SCALE (Used for panels, borders, and inputs) --- */
+    --black: #000000; /* Usually safe to keep pure black for shadows */
+    --blacker: {{colors.surface.default.hex}};
+    --blacker-ish: {{colors.surface_container_lowest.default.hex}};
+    
+    --darkergrey: {{colors.surface_container_low.default.hex}};
+    --thegrey: {{colors.surface_container.default.hex}};
+    --darkgrey: {{colors.surface_container_high.default.hex}};
+    --littlegrey: {{colors.surface_container_highest.default.hex}};
+    
+    --begrey: {{colors.outline_variant.default.hex}};
+    --grey: {{colors.outline.default.hex}};
+    --grey-ish: {{colors.on_surface_variant.default.hex}};
+    --lightgrey: {{colors.on_surface_variant.default.hex}};
+    --lightergrey: {{colors.on_surface_variant.default.hex}};
+
+    /* --- TEXT & ACCENTS --- */
+    --white: {{colors.on_surface.default.hex}};
+    --darkwhite: {{colors.on_surface_variant.default.hex}};
+    --darkerwhite: {{colors.outline.default.hex}};
+
+    /* --- STEAM SPECIFICS --- */
+    /* We keep these somewhat standard so Steam still looks like Steam */
+    --ingame: #90ba3c; /* Everforest green matches this well anyway */
+    --online: {{colors.primary.default.hex}}; /* Matches your system accent */
+    --offline: {{colors.outline.default.hex}};
+    --scrollbar: {{colors.surface_container_highest.default.hex}};
+}

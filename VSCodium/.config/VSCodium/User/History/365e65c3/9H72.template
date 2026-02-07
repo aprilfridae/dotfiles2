@@ -1,0 +1,36 @@
+/* obsidian-global matugen template */
+@define-color bg {{colors.surface.default.hex}};
+@define-color fg {{colors.on_surface.default.hex}};
+@define-color accent {{colors.primary.default.hex}};
+@define-color select-bg {{colors.primary_container.default.hex}};
+@define-color select-fg {{colors.on_primary_container.default.hex}};
+
+#window {
+    background: none;
+}
+
+#box {
+    background-color: alpha(@bg, 0.85);
+    border: 2px solid @accent;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+#search {
+    background-color: alpha(@select-bg, 0.2);
+    color: @fg;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+#item:selected {
+    background-color: @select-bg;
+    color: @select-fg;
+    border-radius: 6px;
+}
+
+#text {
+    color: @fg;
+}

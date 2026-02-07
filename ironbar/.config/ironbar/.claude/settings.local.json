@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(pgrep:*)",
+      "Bash(ironbar:*)",
+      "Bash(hyprctl getoption:*)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:docs.gtk.org)",
+      "WebFetch(domain:bbs.archlinux.org)",
+      "Bash(hyprctl clients:*)",
+      "Bash(hyprctl layers:*)",
+      "Bash(hyprctl reload:*)"
+    ]
+  }
+}

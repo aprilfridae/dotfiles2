@@ -1,0 +1,62 @@
+@import "colors.css";
+
+* {
+    font-family: "CaskaydiaMono Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+}
+
+@import "colors.css";
+
+/* Ensure no global styling is overriding the bar */
+window#waybar {
+    background-color: alpha(@bg_pill, 0.4); 
+    
+    /* Force the border to show */
+    border: 2px solid alpha(@accent, 0.5); 
+    border-radius: 15px;
+    
+    /* This ensures the background doesn't bleed over the border */
+    background-clip: padding-box; 
+    
+    color: @fg_main;
+}
+
+/* Ensure there is enough margin for the border to be visible */
+.modules-left, .modules-center, .modules-right {
+    margin: 2px;
+}
+
+#custom-launcher {
+    min-width: 24px;
+    margin-left: 10px;
+    margin-right: 15px;
+    background-image: url("/home/river/.icons/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: @fg_main;
+}
+
+#workspaces button.active {
+    color: @accent;
+}
+
+#tray {
+    padding: 0 10px;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    color: @accent;
+}
+
+#clock {
+    padding-right: 15px;
+    padding-left: 5px;
+    font-weight: bold;
+}

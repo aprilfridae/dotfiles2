@@ -1,0 +1,50 @@
+{
+    "name": "waybar",
+    "layer": "top",
+    "position": "top",
+    "height": 24,         // Lowered from 30 to make it thinner
+    "margin-top": 5,      // Slightly closer to the top
+    "margin-left": 15,
+    "margin-right": 15,
+    "spacing": 0,
+    // ... rest of your modules
+
+    "modules-left": ["custom/launcher"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "clock"],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󱓻",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M}"
+    }
+}

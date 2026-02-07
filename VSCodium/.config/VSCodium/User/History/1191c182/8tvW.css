@@ -1,0 +1,100 @@
+/* 1. THE NUCLEAR RESET */ 
+ * { 
+     all: unset; 
+     /* Google Sans for text + Nerd Font for the icons */
+     font-family: "Google Sans Code", "Symbols Nerd Font Mono"; 
+     font-size: 11px; 
+ } 
+
+ /* 2. REBUILD THE BAR - 16px Height */ 
+ .background { 
+     background-color: alpha(@bg_pill, 0.8); 
+     display: flex; 
+     flex-direction: row; 
+     min-height: 16px;  
+     padding: 0 10px; 
+ } 
+
+ /* 3. REBUILD THE LAYOUT */ 
+ #start, #center, #end, .box, .widget, .workspaces, .custom { 
+     display: flex; 
+     align-items: center; 
+ } 
+
+ /* 4. BIG LOGO - Size Animation Re-added */ 
+ #launcher-button { 
+     background-image: url("file:///home/river/.icons/logo.png"); 
+     background-size: 24px 24px; 
+     background-repeat: no-repeat; 
+     background-position: center; 
+     min-width: 36px; 
+     min-height: 24px; 
+     margin-right: 12px; 
+     background-color: transparent; 
+     transition: transform 0.2s ease-in-out; 
+ } 
+
+ #launcher-button:hover { 
+     background-color: transparent; 
+     transform: scale(1.15); 
+ } 
+
+ /* 5. WORKSPACES: Smooth Color Fade */ 
+ .workspaces .item { 
+     margin: 0 4px; 
+ } 
+
+ .workspaces .item label { 
+     color: alpha(@fg_main, 0.25); 
+     font-size: 13px; 
+     transition: color 0.3s ease-in-out; 
+ } 
+
+ .workspaces .item.focused label { 
+     color: @accent; 
+ } 
+
+ /* 6. MODULES & SPACING (Fixes the squeeze) */ 
+ #end .widget, #end .button, #end button, #end .tray { 
+     margin-left: 12px;  
+     transition: color 0.2s ease-in-out; 
+ } 
+
+ /* 7. ACCENT HOVER - For everything EXCEPT launcher */ 
+ .clock:hover, 
+ .volume:hover, 
+ .network_manager:hover, 
+ .bluetooth:hover, 
+ .tray:hover, 
+ .button:hover, 
+ button:hover { 
+     color: @accent; 
+ } 
+
+ /* 8. SLIDERS */ 
+ scale contents trough { 
+     background-color: alpha(@fg_main, 0.1); 
+     min-height: 2px; 
+ } 
+
+ /* 9. POPOVERS & MENUS: Flatness (No Borders) */ 
+ popover, .popover, .menu, menu, menuitem { 
+     background: transparent; 
+     border: none !important; 
+     box-shadow: none !important; 
+ } 
+
+ popover contents, .menu, .decoration { 
+     background-color: alpha(@bg_pill, 0.98); 
+     padding: 10px; 
+     border: none !important; 
+     box-shadow: none !important; 
+     border-radius: 0; 
+ } 
+
+ /* 10. BUTTON BASICS */ 
+ .button, button { 
+     min-width: 16px; 
+     min-height: 16px; 
+     cursor: pointer; 
+ }

@@ -1,0 +1,127 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "bd948af658c13196a582f42c40df8409b10eb71c98bf1bcb1f04dd7b87b7d609",
+    "telemetry.devDeviceId": "132bb4e8-7b43-4d3a-aa97-05d733084f51",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/river/dotfiles2"
+            }
+        ],
+        "emptyWindows": [
+            {
+                "backupFolder": "1770363312392"
+            }
+        ]
+    },
+    "windowControlHeight": 42,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/river/.config/mozilla/firefox/1nl7dn42.default-release": "__default__profile__",
+            "file:///home/river/.var/app/dev.vencord.Vesktop/config/vesktop/settings": "__default__profile__",
+            "file:///home/river/.local/share/Steam/steamapps/common/Counter-Strike%20Global%20Offensive": "__default__profile__",
+            "file:///home/river/.local/share/nicotine/downloads": "__default__profile__",
+            "file:///home/river/.zen/c2uso7pn.Default%20%28release%29": "__default__profile__",
+            "file:///home/river": "__default__profile__",
+            "file:///home/river/.local/share/Steam/steamapps/common/Valheim": "__default__profile__",
+            "file:///home/river/Downloads": "__default__profile__",
+            "file:///home/river/.config/vesktop/themes": "__default__profile__",
+            "file:///home/river/dotfiles2": "__default__profile__"
+        },
+        "emptyWindows": {
+            "1770363312392": "__default__profile__"
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/river/dotfiles2",
+            "backupPath": "/home/river/.config/VSCodium/Backups/60ed3fa55ad89b0eaac80471f4cbfd5f",
+            "uiState": {
+                "mode": 0,
+                "x": 2280,
+                "y": 140,
+                "width": 1200,
+                "height": 800,
+                "zoomLevel": 1
+            }
+        },
+        "openedWindows": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#0a1519",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#d9e4ea",
+            "background": "#0a1519",
+            "editorBackground": "#0a1519",
+            "titleBarBackground": "#0a1519",
+            "activityBarBackground": "#0a1519",
+            "sideBarBackground": "#0a1519",
+            "sideBarBorder": "rgba(255, 255, 255, 0)",
+            "statusBarBackground": "#0a1519",
+            "statusBarBorder": "rgba(255, 255, 255, 0)",
+            "statusBarNoFolderBackground": "#0a1519"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 300,
+            "auxiliaryBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 300,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "08c22f6c717d5c76ea6a3cff97327256": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "98f3d55987890a1ec7528ca417aceeeb": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "62629c0e8cd6de8c0e72d3d464a92722": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "b1d2a24de240953f02bc4eb4771ab1c8": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "1b4d6ad543aef2159eb9457d8ecd22c6": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "e3b13016c01525e09991c7a61d239339": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "d3155c1aa83a4a6a974cebedcd54fd6e": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "7c86e9f74927a0d96dbcdbb8d59cd7ff": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "aeb8bac847fccfa729966cdc33385ca4": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "67224bfff5fbec660642596f95e5a6a0": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
+    }
+}

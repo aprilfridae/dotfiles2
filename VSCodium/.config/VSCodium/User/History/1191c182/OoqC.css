@@ -1,0 +1,103 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    /* Updated to Google Sans Code with fallbacks */
+    font-family: "Google Sans Code", "Google Sans Mono", "Roboto Mono", monospace;
+    font-size: 13px;
+}
+
+/* 2. REBUILD THE BAR - Bumped to 20px to support bigger icons */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    display: flex;
+    flex-direction: row;
+    min-height: 20px; 
+    padding: 0 14px;
+}
+
+/* 3. REBUILD THE LAYOUT */
+#start, #center, #end, .box, .widget, .workspaces, .custom {
+    display: flex;
+    align-items: center;
+}
+
+/* 4. BIG LOGO - Animation Kept */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+    min-height: 24px;
+    margin-right: 18px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#launcher-button:hover {
+    transform: scale(1.15);
+}
+
+/* 5. WORKSPACES: Smooth Color Fade */
+.workspaces .item {
+    margin: 0 8px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 15px; /* Bigger workspace dots/numbers */
+    transition: color 0.3s ease-in-out;
+}
+
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 6. BIGGER WIDGETS & PROPER SPACING */
+#end {
+    margin-left: auto;
+}
+
+/* Targeting the modules to force a clean 24px gap */
+#end > .widget, 
+#end > .button, 
+#end > .tray,
+#end > box {
+    margin-left: 24px; 
+}
+
+/* MAKING THE ICONS BIGGER */
+#end label, #end image {
+    font-size: 17px;      /* Increased size */
+    -gtk-icon-size: 17px; /* Forces system icons to match */
+    color: @fg_main;
+}
+
+.clock {
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+/* 7. ACCENT HOVER - Isolated for the Right Side */
+#end .widget:hover label,
+#end .widget:hover image,
+#end .button:hover,
+#end .tray .item:hover {
+    color: @accent;
+    transition: color 0.2s ease;
+}
+
+/* 8. POPOVERS & MENUS: Flatness (No Borders) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* 9. SLIDERS */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 2px;
+}

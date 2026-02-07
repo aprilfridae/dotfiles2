@@ -1,0 +1,66 @@
+@import "colors.css";
+
+/* 1. Reset everything to ensure no hidden padding makes it fat */
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 15px; /* Slightly smaller font helps slim the bar */
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* 2. THE MASTER PILL */
+window#waybar > box {
+    /* Use 0.65 to be safely above your 0.5 ignore_alpha rule */
+    background-color: alpha(@bg_pill, 0.65); 
+    border: 2px solid @accent;
+    border-radius: 25px;
+    
+    /* Reduced vertical padding (2px) makes it thin */
+    padding: 2px 20px; 
+    
+    /* Ensure it doesn't grow taller than intended */
+    min-height: 0; 
+    
+    background-clip: padding-box;
+}
+
+/* 3. MODULE SPACING (Internal) */
+#custom-launcher {
+    background-image: url("/home/river/.icons/logo.png"); 
+    background-size: 22px; /* Smaller icon to fit thin bar */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+}
+
+#workspaces button {
+    color: alpha(@fg_main, 0.6);
+    padding: 0 10px;
+    margin: 2px 0; /* Tight margin */
+}
+
+#workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.2);
+    border-radius: 15px;
+}
+
+#tray, #pulseaudio, #clock {
+    padding: 0 10px;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#clock {
+    font-weight: bold;
+}

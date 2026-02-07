@@ -1,0 +1,14 @@
+{
+    "workbench.colorCustomizations": {
+        "editor.background": "#131314",
+        "statusBar.background": "#bcc8d3",
+        "tab.activeBorder": "#bcc8d3"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Material Code",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "material-code.inject": [
+        "~/.cache/matugen/codium.css"
+    ]
+}

@@ -1,0 +1,53 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px; /* Matches your Waybar font size */
+    font-weight: 500;
+}
+
+/* The main bar container */
+.ironbar {
+    background: transparent;
+}
+
+/* The "Master Pill" logic. 
+   Ironbar wraps modules in these classes.
+*/
+.launcher, 
+.workspaces, 
+.clock, 
+.volume, 
+.network, 
+.bluetooth, 
+.tray {
+    background: @bg_pill; /* Uses your Matugen colors */
+    margin: 5px 4px;      /* Matches your tightened margins */
+    padding: 2px 12px;    /* Matches your tightened padding */
+    border-radius: 25px; 
+    border: 2px solid @accent; 
+    color: @fg_main;
+}
+
+/* Specific styling for Workspaces to get those pills right */
+.workspaces button {
+    color: alpha(@fg_main, 0.6);
+    background: transparent;
+    padding: 0 8px;
+    margin: 2px 2px;
+    border-radius: 20px;
+}
+
+.workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.2);
+}
+
+/* Launcher icon setup */
+.launcher {
+    background-image: url("file:///home/river/.icons/logo.png"); /* */
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 45px;
+}

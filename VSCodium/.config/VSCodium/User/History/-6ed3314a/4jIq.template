@@ -1,0 +1,131 @@
+/* All-in-One SwayNC Obsidian Template */
+
+/* Matugen Colors */
+@define-color bg {{colors.surface.default.hex}};
+@define-color fg {{colors.on_surface.default.hex}};
+@define-color accent {{colors.primary.default.hex}};
+@define-color crit {{colors.error.default.hex}};
+
+* {
+    font-family: "Inter", "Source Sans Pro", sans-serif;
+}
+
+/* Notification Window (Popups) */
+.notification-row {
+    outline: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.notification {
+    background: alpha(@bg, 0.8);
+    border: 2px solid @accent;
+    border-radius: 12px;
+    color: @fg;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Critical Notifications (e.g. Battery Low) */
+.notification.critical {
+    border: 2px solid @crit;
+}
+
+.notification-content {
+    margin-top: 5px;
+}
+
+.notification-default-action {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Control Center (The Side Panel) */
+.control-center {
+    background: alpha(@bg, 0.9);
+    border: 2px solid @accent;    /* Changed from border-left to border */
+    color: @fg;
+    padding: 15px;
+    border-radius: 12px;          /* Changed from 0 to 12px */
+    margin: 10px;                 /* Added margin to make rounding/border visible */
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+/* Top Bar of Control Center */
+.control-center-list-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Clear All Button */
+.control-center-clear-all {
+    background: @accent;
+    color: @bg;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.control-center-clear-all:hover {
+    background: alpha(@accent, 0.8);
+}
+
+/* Buttons and Toggles */
+.widget-title > button {
+    background: @accent;
+    color: @bg;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* SwayNC Sliders & Widgets Styling */
+
+/* Sliders (Volume/Backlight) */
+.widget-volume, .widget-backlight {
+    background: alpha(@bg, 0.5);
+    border: 2px solid @accent;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+}
+
+/* The actual bar inside the slider */
+trough {
+    background: alpha(@fg, 0.1);
+    border-radius: 10px;
+    min-height: 10px;
+}
+
+highlight {
+    background: @accent;
+    border-radius: 10px;
+}
+
+/* Music Player (MPRIS) */
+.widget-mpris {
+    background: alpha(@bg, 0.5);
+    border: 2px solid @accent;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.widget-mpris-player {
+    padding: 5px;
+}
+
+.widget-mpris-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.widget-mpris-subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+

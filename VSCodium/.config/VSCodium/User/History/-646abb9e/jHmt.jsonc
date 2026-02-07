@@ -1,0 +1,64 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 10,
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
+    "modules-center": ["clock"],
+    "modules-right": [
+    "network", // New Wi-Fi Pill
+    "cpu",
+    "memory",
+    "battery"
+],
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 32,
+        "on-click": "activate",
+        "rewrite": {
+            "dev.vencord.Vesktop": "vesktop",
+            "Vesktop": "vesktop",
+            "Firefox": "firefox"
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M} "
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "{}% "
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
+
+"network": {
+    "interface": "wlan0", // Adjust if your interface name is different
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": "󰈀 {ifname} via {gwaddr}\n󰩟 {ipaddr}\n⬆ {bandwidthUpBits} ⬇ {bandwidthDownBits}",
+    "on-click": "kitty --class float_nmtui -e nmtui"
+},

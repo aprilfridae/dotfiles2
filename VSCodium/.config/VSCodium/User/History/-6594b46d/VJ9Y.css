@@ -1,0 +1,75 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+/* Make the window layer transparent */
+window#waybar {
+    background: transparent;
+}
+
+/* --- THE SINGLE MASTER PILL --- */
+/* This is the secret. We style the internal box as the Pill. */
+window#waybar > box {
+    background: alpha(@bg_pill, 0.6); /* 0.6 ensures blur works with your 0.5 rule */
+    border: 2px solid @accent;
+    border-radius: 25px;
+    margin: 0;
+    padding: 0 20px;
+    box-shadow: 0px 0px 5px alpha(@accent, 0.2);
+    background-clip: padding-box;
+}
+
+/* --- MODULE GROUP SPACING --- */
+/* This ensures the pill stays "full" even with spaces */
+.modules-left {
+    padding-left: 5px;
+}
+
+.modules-right {
+    padding-right: 5px;
+}
+
+/* --- LAUNCHER --- */
+#custom-launcher {
+    background-image: url("/home/river/.icons/logo.png"); 
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 50px;
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+    color: alpha(@fg_main, 0.6);
+    background: transparent;
+    padding: 0 12px;
+    margin: 4px 4px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.2);
+}
+
+/* --- RIGHT SIDE --- */
+#tray, #pulseaudio, #clock {
+    padding: 0 10px;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#clock {
+    font-weight: bold;
+}

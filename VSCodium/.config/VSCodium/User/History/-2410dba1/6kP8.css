@@ -1,0 +1,28 @@
+/**
+ * @name Obsidian-Matugen
+ * @author Gemini
+ * @description Syncs Vesktop with Obsidian colors via Matugen
+*/
+
+@import url("file:///home/river/cache/matugen/discord.css");
+
+.theme-dark, .theme-light {
+    --header-primary: var(--fg_main);
+    --header-secondary: var(--fg_muted);
+    --text-normal: var(--fg_main);
+    --text-muted: var(--fg_muted);
+    
+    /* Backgrounds */
+    --background-primary: var(--bg_main);
+    --background-secondary: var(--bg_secondary);
+    --background-tertiary: var(--bg_main);
+    --background-floating: var(--bg_secondary);
+    
+    /* Accents */
+    --brand-experiment: var(--accent);
+    --brand-experiment-560: var(--accent);
+    --button-filled-brand-background: var(--accent);
+}
+
+/* Make it look cleaner */
+.container_ee6116 { background-color: var(--bg_main) !important; } /* Channel list */

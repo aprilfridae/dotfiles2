@@ -1,0 +1,72 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 12px;
+}
+
+/* 3. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 45px; /* Forced wider box */
+    min-height: 24px;
+    margin-right: 30px; /* Massive gap to clear the workspaces */
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 4. WORKSPACES - Spaced Out */
+.workspaces .item {
+    padding: 0 15px; /* Huge gap between workspace icons */
+}
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 16px;
+    transition: color 0.4s ease-in-out;
+}
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. THE RIGHT SIDE (#end) - Forced Separation */
+#end .widget, 
+#end .button, 
+#end .tray {
+    padding-left: 40px; /* This is a massive 'force-field' for each widget */
+    min-width: 30px;    /* Prevents the widget from collapsing */
+}
+
+/* Internal tray icon spacing */
+.tray .item {
+    padding-left: 20px;
+}
+
+/* HUGE ICONS */
+#end label, #end image {
+    font-size: 22px; 
+    color: @fg_main;
+}
+
+.clock {
+    font-weight: 900;
+    font-size: 16px;
+    color: @fg_main;
+}
+
+/* 6. POPOVERS (No Borders) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}

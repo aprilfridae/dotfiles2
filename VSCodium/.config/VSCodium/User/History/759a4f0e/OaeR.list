@@ -1,0 +1,18 @@
+[Default Applications]
+text/plain=codium.desktop
+text/markdown=codium.desktop
+application/json=codium.desktop
+text/css=codium.desktop
+text/x-python=codium.desktop
+text/x-shellscript=codium.desktop
+text/javascript=codium.desktop
+text/html=codium.desktop
+image/png=imv.desktop
+image/jpeg=imv.desktop
+image/svg+xml=imv.desktop
+image/webp=imv.desktop
+
+[Added Associations]
+text/plain=codium.desktop;
+image/png=imv.desktop;
+image/jpeg=imv.desktop;

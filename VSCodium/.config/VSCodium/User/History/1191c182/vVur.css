@@ -1,0 +1,97 @@
+/* 1. THE NUCLEAR RESET - This kills EVERYTHING GTK draws by default */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+/* 2. REBUILD THE BAR */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    display: flex;
+    flex-direction: row;
+    min-height: 24px;
+    padding: 0 10px;
+}
+
+/* 3. REBUILD THE LAYOUT */
+#start, #center, #end, .box, .widget, .workspaces, .custom {
+    display: flex;
+    align-items: center;
+}
+
+/* 4. BIGGER LAUNCHER LOGO */
+#launcher {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+    margin-right: 10px;
+}
+
+/* 5. WORKSPACES: Static Color Swap */
+.workspaces .item {
+    margin: 0 8px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 16px;
+}
+
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 6. SLIDERS (Kept for brightness/future use) */
+scale {
+    min-width: 80px;
+    margin: 0 10px;
+}
+
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 4px;
+    border-radius: 10px;
+}
+
+scale contents trough highlight {
+    background-color: @accent;
+    border-radius: 10px;
+}
+
+/* 7. POPOVERS & MENUS: Absolute Flatness */
+/* Targeting menu and menuitem as well for tray right-clicks */
+popover, .popover, .menu, menu, menuitem {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* 8. MODULES & NEW CUSTOM BUTTONS */
+/* Added .button and button to ensure your TUI icons match other icons */
+.clock {
+    font-weight: 800;
+    padding: 0 10px;
+}
+
+.volume, .network_manager, .bluetooth, .tray, .button, button {
+    padding: 0 6px;
+    background: transparent;
+    border: none;
+}
+
+/* Special fix for the custom module container */
+.custom {
+    padding: 0;
+    margin: 0;
+}

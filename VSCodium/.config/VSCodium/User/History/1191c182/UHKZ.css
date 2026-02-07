@@ -1,0 +1,82 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    display: flex;
+    flex-direction: row;
+    min-height: 16px; 
+    padding: 0 10px;
+}
+
+/* 3. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 36px;
+    min-height: 24px;
+    margin-right: 12px;
+    background-color: transparent;
+    transition: transform 0.2s ease-in-out;
+}
+
+#launcher-button:hover {
+    transform: scale(1.15);
+}
+
+/* 4. WORKSPACES (Left) - Kept clean but visible */
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 13px;
+    margin: 0 4px;
+    transition: color 0.3s ease-in-out;
+}
+
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. BIG ASS WIDGETS (THE RIGHT SIDE) */
+/* This is what you actually wanted! */
+#end .widget, 
+#end .button, 
+#end button, 
+#end .tray,
+#end .tray image { /* Specifically targeting tray icons too */
+    margin-left: 16px;  /* Huge gap for huge icons */
+    font-size: 18px;    /* Big, bold icons */
+    min-width: 22px;
+    min-height: 16px;
+    transition: color 0.2s ease-in-out;
+}
+
+/* The Clock needs a slightly smaller font than the icons to look balanced */
+.clock {
+    font-weight: 900;
+    font-size: 14px; 
+    margin-left: 16px;
+}
+
+/* 6. ACCENT HOVER - For the whole right side */
+#end .widget:hover,
+#end .button:hover,
+#end button:hover,
+#end .tray:hover,
+.clock:hover {
+    color: @accent;
+}
+
+/* 7. POPOVERS (Keeping your borderless preference) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}

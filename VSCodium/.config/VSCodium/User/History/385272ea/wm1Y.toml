@@ -1,0 +1,35 @@
+position = "top"
+height = 45
+anchor_to_edges = true
+margin_top = 60
+margin_start = 20
+margin_end = 20
+
+[[start]]
+type = "launcher"
+name = "launcher"
+on_click_left = "walker" # This is the missing trigger
+
+[[start]]
+type = "clock"
+format = "%I:%M %p"
+on_click_left = "none"
+
+[[center]]
+type = "workspaces"
+name_map = { "1" = "●", "2" = "●", "3" = "●", "4" = "●", "5" = "●", "6" = "●", "7" = "●", "8" = "●", "9" = "●", "10" = "●" }
+all_monitors = false
+
+[[end]]
+type = "network_manager"
+icon_size = 14
+
+[[end]]
+type = "custom"
+bar = [
+    # System Tray Button
+    { type = "button", label = "󱐥", on_click_left = "kitty --title SystemTray -o confirm_os_window_close=0 sh -c 'tray-tui; exit'" },
+    
+    # Audio Mixer Button
+    { type = "button", label = "󰕾", on_click_left = "kitty --title AudioMixer -o confirm_os_window_close=0 sh -c 'ncpamixer; exit'" }
+]

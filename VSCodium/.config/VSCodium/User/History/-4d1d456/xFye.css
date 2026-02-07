@@ -1,0 +1,57 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+}
+
+/* This makes the main bar invisible so the pills "float" */
+.background {
+    background-color: transparent;
+}
+
+/* We target BOTH .container and .widget box.
+   This covers all versions of Ironbar.
+*/
+.launcher > box,
+.workspaces > box,
+.volume > box,
+.network > box,
+.bluetooth > box,
+.clock > box,
+.tray > box,
+.launcher .container,
+.workspaces .container,
+.volume .container,
+.network .container,
+.bluetooth .container,
+.clock .container,
+.tray .container {
+    background-color: @bg_pill;
+    border: 2px solid @accent;
+    border-radius: 25px;
+    margin: 5px 4px;
+    padding: 2px 12px;
+    color: @fg_main;
+}
+
+/* Fixed Launcher Icon */
+.launcher > box, .launcher .container {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 45px;
+}
+
+/* Workspace Active/Inactive Dots */
+.workspaces button {
+    background: transparent;
+    color: alpha(@fg_main, 0.3);
+}
+
+.workspaces button.active {
+    color: @accent;
+}

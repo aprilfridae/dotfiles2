@@ -1,0 +1,95 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 0,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/filemanager"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "custom/updates",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "cpu",
+        "custom/hypridle",
+        "battery",
+        "custom/exit"
+    ],
+
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󱓻",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "custom/filemanager": {
+        "format": "",
+        "on-click": "thunar",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "󱑂 {:%A %H:%M}",
+        "format-alt": "󰃭 {:%d %B %Y}",
+        "tooltip": false
+    },
+
+    "custom/updates": {
+        "format": " {}",
+        "exec": "update-check",
+        "interval": 1800,
+        "return-type": "json",
+        "on-click": "ghostty --class=local.floating -e update-perform"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "ghostty --class=local.wiremix -e wiremix"
+    },
+
+    "network": {
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰀂",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{essid}",
+        "on-click": "ghostty --class=local.floating -e impala"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "on-click": "ghostty -e btop"
+    },
+
+    "custom/hypridle": {
+        "format": "",
+        "exec": "hypridle-toggle status",
+        "return-type": "json",
+        "interval": 60,
+        "on-click": "hypridle-toggle toggle"
+    },
+
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "astal-config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astal --watch",
+    "build": "astal build"
+  },
+  "dependencies": {
+    "astal": "file:astal" 
+  },
+  "devDependencies": {
+    "@girs/gjs": "latest",
+    "@girs/gtk-3.0": "latest"
+  }
+}

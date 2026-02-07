@@ -1,0 +1,13 @@
+:root {
+  /* Steam-specific color overrides */
+  --steam-primary: {{colors.primary.default.hex}};
+  --steam-bg: {{colors.surface.default.hex}};
+  --steam-card: {{colors.surface_container.default.hex}};
+  --steam-text: {{colors.on_surface.default.hex}};
+  --steam-accent: {{colors.secondary.default.hex}};
+
+  /* Force Millennium/SteamUI colors */
+  --Gray10: var(--steam-bg) !important;
+  --Gray15: var(--steam-card) !important;
+  --AppColor: var(--steam-primary) !important;
+}

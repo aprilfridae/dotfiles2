@@ -1,0 +1,50 @@
+/* Matugen Variables mapped to Zen/PywalZen logic */
+:root {
+  /* Surface & Backgrounds */
+  --zen-primary: {{colors.primary.default.hex}};
+  --zen-on-primary: {{colors.on_primary.default.hex}};
+  --zen-background: {{colors.surface.default.hex}};
+  --zen-sidebar-bg: {{colors.surface_container.default.hex}};
+  --zen-urlbar-bg: {{colors.surface_container_high.default.hex}};
+  
+  /* Text & Accents */
+  --zen-text: {{colors.on_surface.default.hex}};
+  --zen-accent: {{colors.secondary.default.hex}};
+  --zen-outline: {{colors.outline.default.hex}};
+}
+
+/* Apply the PywalZen logic to the Browser UI */
+#main-window, #browser, .browserStack, #tabbrowser-tabpanels {
+    background-color: var(--zen-background) !important;
+}
+
+#nav-bar, #navigator-toolbox, #TabsToolbar {
+    background-color: var(--zen-background) !important;
+    border: none !important;
+}
+
+#sidebar-box, #sidebar-header, .zen-sidebar-header {
+    background-color: var(--zen-sidebar-bg) !important;
+    border-right: 1px solid var(--zen-outline)22 !important; /* Subtle separator */
+}
+
+/* URL Bar styling following the Zen "Floating" look */
+#urlbar-background {
+    background-color: var(--zen-urlbar-bg) !important;
+    border: 1px solid var(--zen-primary) !important;
+}
+
+/* Active Tab Highlight */
+.tab-background[selected="true"] {
+    background-color: var(--zen-primary) !important;
+}
+
+/* Kill that sliver (Nuclear Option) */
+#sidebar-splitter, #zen-current-workspace-indicator {
+    display: none !important;
+}
+
+:root {
+    --zen-element-separation: 0px !important;
+    --zen-view-padding: 0px !important;
+}

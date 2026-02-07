@@ -1,0 +1,92 @@
+/* Walker Obsidian x Matugen Template */
+@define-color window_bg_color #131314;
+@define-color accent_bg_color #bfc7d5;
+@define-color theme_fg_color #e4e2e3;
+@define-color error_bg_color #ffb4ab;
+@define-color error_fg_color #690005;
+
+* {
+  all: unset;
+}
+
+/* Base UI components */
+.box-wrapper {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background: alpha(@window_bg_color, 0.85); /* Obsidian Transparency */
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid alpha(@accent_bg_color, 0.5);
+}
+
+.input {
+  caret-color: @theme_fg_color;
+  background: alpha(@window_bg_color, 0.5);
+  padding: 10px;
+  color: @theme_fg_color;
+  border-radius: 10px;
+}
+
+.input selection {
+  background: alpha(@accent_bg_color, 0.4);
+}
+
+.list {
+  color: @theme_fg_color;
+  margin-top: 10px;
+}
+
+.item-box {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Selection State */
+child:selected .item-box {
+  background: alpha(@accent_bg_color, 0.3);
+}
+
+.item-subtext {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.preview-box, .placeholder, .elephant-hint {
+  color: @theme_fg_color;
+}
+
+/* Icon scaling */
+.normal-icons { -gtk-icon-size: 16px; }
+.large-icons { -gtk-icon-size: 32px; }
+
+scrollbar { opacity: 0; }
+
+/* ... keep your existing code above ... */
+
+/* Specific styling for the Wallpaper Picker Plugin */
+#wallpapers .item-box {
+    padding: 12px;
+    /* This ensures the thumbnail and text align nicely */
+    transition: background 0.2s ease; 
+}
+
+#wallpapers .icon {
+    /* Large thumbnails */
+    width: 240px; 
+    height: 135px; /* 16:9 Aspect Ratio */
+    border-radius: 12px;
+    margin-right: 20px;
+    /* Ensures the image fills the space without stretching */
+    background-size: cover;
+    background-position: center;
+}
+
+#wallpapers .item-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Ensure the selected state still looks good with large thumbnails */
+#wallpapers child:selected .item-box {
+    background: alpha(@accent_bg_color, 0.4);
+    border: 1px solid @accent_bg_color;
+}

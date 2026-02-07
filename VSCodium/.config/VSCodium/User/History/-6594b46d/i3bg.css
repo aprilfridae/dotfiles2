@@ -1,0 +1,67 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+}
+
+/* 1. Make the window invisible so we can draw our own unified pill */
+window#waybar {
+    background: transparent;
+}
+
+/* 2. STYLE THE UNIFIED PILL (The Border and Blur target) */
+/* This targets the internal container holding everything */
+window#waybar > box {
+    background-color: alpha(@bg_pill, 0.55); /* High alpha to trigger your ignore_alpha 0.5 */
+    margin: 8px 15px; 
+    padding: 2px 10px; 
+    border-radius: 25px; 
+    border: 2px solid @accent; 
+    color: @fg_main;
+    /* This makes the blur possible */
+    background-clip: padding-box;
+}
+
+/* --- LAUNCHER --- */
+#custom-launcher {
+    /* Use the path without 'file://' if GTK has issues, or keep it if it works */
+    background-image: url("/home/river/.icons/logo.png"); 
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+    margin-right: 10px;
+}
+
+/* --- WORKSPACES (Centered pill-style) --- */
+#workspaces button {
+    color: alpha(@fg_main, 0.6);
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+#workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.2);
+}
+
+/* --- RIGHT SIDE MODULES --- */
+#pulseaudio, #clock, #tray {
+    padding: 0 10px;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#pulseaudio.muted {
+    color: @error;
+}
+
+#clock {
+    font-weight: bold;
+}

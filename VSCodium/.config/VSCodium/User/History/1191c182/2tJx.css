@@ -1,0 +1,99 @@
+/* KILL ALL THE THINGS - The Flat Reset */
+* {
+    /* Stop GTK from drawing shadows on anything */
+    -gtk-icon-shadow: none;
+    text-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+/* The Main Bar */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    border: none;
+    border-radius: 0; 
+    margin: 0; 
+    padding: 0 12px;
+    min-height: 24px; 
+}
+
+/* Nuke GTK Button and Widget "Boxes" */
+#start, #center, #end, .box, .widget, button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    /* This is the magic property that kills GTK button relief */
+    -gtk-outline-radius: 0;
+    transition: none;
+}
+
+/* Ensure buttons don't pop a box when you hover or click them */
+button:hover, button:active, button:checked {
+    background: none;
+    background-color: transparent;
+    border: none;
+}
+
+/* SLIDERS (Volume/Brightness) - Rebuilt to be visible without boxes */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 4px;
+    border-radius: 2px;
+}
+
+scale contents trough highlight {
+    background-color: @accent;
+    border-radius: 2px;
+}
+
+scale contents trough slider {
+    background-color: @accent;
+    min-height: 10px;
+    min-width: 10px;
+    border-radius: 5px;
+}
+
+/* BIGGER LAUNCHER LOGO */
+#launcher {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+}
+
+/* WORKSPACES: Static Color Swap */
+.workspaces .item label {
+    color: alpha(@fg_main, 0.2); 
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.workspaces .item.focused label {
+    color: @accent; 
+}
+
+/* POP-OVERS: Borderless and Single-Layer */
+popover {
+    /* Set outer container to zero */
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+popover contents,
+popover > contents {
+    /* Only style the inner box */
+    background-color: alpha(@bg_pill, 0.95);
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    padding: 12px;
+}
+
+popover arrow {
+    /* Hide the little popover triangle if it's acting up */
+    -gtk-icon-source: none;
+    background: transparent;
+}

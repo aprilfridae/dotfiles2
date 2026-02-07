@@ -1,0 +1,45 @@
+window {
+    background-color: transparent;
+}
+
+#window {
+    /* Use an 8-digit hex for transparency (bf = ~75% opacity) */
+    /* If your template doesn't have 'bf' added, use the rgba below */
+    background-color: rgba(16, 20, 23, 0.85); 
+    color: @foreground;
+    border-radius: 15px;
+    border: none;
+}
+
+#outer-box {
+    margin: 10px;
+    border: none;
+}
+
+#input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: @selection;
+    color: @foreground;
+    /* Optional: a very subtle border just for the search bar */
+    border: 1px solid @primary; 
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#entry:selected {
+    background-color: @primary; /* Using primary here makes the 'Ocean' blue pop */
+    color: @background;
+}
+
+#text:selected {
+    color: @background;
+}

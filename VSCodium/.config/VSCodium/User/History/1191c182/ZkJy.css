@@ -1,0 +1,104 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+}
+
+/* 2. REBUILD THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    display: flex;
+    flex-direction: row;
+    min-height: 16px; 
+    padding: 0 10px;
+}
+
+/* 3. REBUILD THE LAYOUT */
+#start, #center, #end, .box, .widget, .workspaces, .custom {
+    display: flex;
+    align-items: center;
+}
+
+/* 4. BIG LOGO - 24px (Oversized for 16px bar) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 36px;
+    min-height: 24px;
+    margin-right: 12px;
+    background-color: transparent; /* No background accent */
+}
+
+#launcher-button:hover {
+    background-color: transparent;
+    /* Optional: very slight lift without color change */
+    -gtk-icon-transform: scale(1.1);
+}
+
+/* 5. WORKSPACES: Smooth Color Fade */
+.workspaces .item {
+    margin: 0 4px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 13px;
+    transition: color 0.3s ease-in-out;
+}
+
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 6. MODULES & SPACING (The "Squeezed" Fix) */
+/* This adds space between your status icons on the right */
+#end .widget, #end .button, #end button, #end .tray {
+    margin-left: 10px; 
+    transition: color 0.2s ease;
+}
+
+/* 7. ACCENT HOVER - Restored for everything EXCEPT launcher */
+.clock:hover,
+.volume:hover,
+.network_manager:hover,
+.bluetooth:hover,
+.tray:hover,
+.button:hover,
+button:hover {
+    color: @accent;
+}
+
+/* 8. SLIDERS */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 2px;
+}
+
+/* 9. POPOVERS & MENUS: Absolute Flatness (No Borders) */
+popover, .popover, .menu, menu, menuitem {
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* 10. CLOCK & BUTTON BASICS */
+.clock {
+    font-weight: 800;
+}
+
+.button, button {
+    min-width: 16px;
+    min-height: 16px;
+    cursor: pointer;
+}

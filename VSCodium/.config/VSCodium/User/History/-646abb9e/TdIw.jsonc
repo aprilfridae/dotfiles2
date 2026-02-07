@@ -1,0 +1,64 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 15,
+    "margin-right": 15,
+    "spacing": 0,
+    "height": 45,
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "tray"],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "on-click": "activate",
+        "rewrite": {
+            "dev.vencord.Vesktop": "vesktop",
+            "Vesktop": "vesktop",
+            "Firefox": "firefox"
+        }
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p} "
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "cpu": { 
+        "format": " {usage}%" 
+    },
+
+    "memory": { 
+        "format": " {}%" 
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}

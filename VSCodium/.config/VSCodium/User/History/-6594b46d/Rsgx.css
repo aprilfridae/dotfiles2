@@ -1,0 +1,70 @@
+@import "colors.css";
+
+/* 1. GLOBAL RESET: Kill all default GTK backgrounds/borders */
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+    background-color: transparent; /* Forces everything to be clear by default */
+    background: none;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* 2. THE MASTER PILL: The ONLY place with a background/border */
+window#waybar > box {
+    background-color: alpha(@bg_pill, 0.6); 
+    border: 2px solid @accent;
+    border-radius: 25px;
+    margin: 0;
+    padding: 0 20px;
+    box-shadow: 0px 0px 5px alpha(@accent, 0.2);
+    background-clip: padding-box;
+}
+
+/* 3. MODULE FIXES: Ensuring no grey boxes leak through */
+#workspaces, #tray, #pulseaudio, #clock, #custom-launcher {
+    background: transparent;
+    background-color: transparent;
+}
+
+/* --- LAUNCHER --- */
+#custom-launcher {
+    background-image: url("/home/river/.icons/logo.png"); 
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 50px;
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+    color: alpha(@fg_main, 0.6);
+    padding: 0 12px;
+    margin: 4px 4px;
+    border-radius: 20px;
+}
+
+#workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.2); /* Active workspace highlight is okay */
+}
+
+/* --- RIGHT SIDE --- */
+#tray, #pulseaudio, #clock {
+    padding: 0 10px;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#clock {
+    font-weight: bold;
+}

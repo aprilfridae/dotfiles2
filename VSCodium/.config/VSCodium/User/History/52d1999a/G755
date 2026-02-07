@@ -1,0 +1,7 @@
+# VSCodium junk
+vscodium/.config/VSCodium/User/workspaceStorage/
+vscodium/.config/VSCodium/User/globalStorage/
+vscodium/.config/VSCodium/User/Backups/
+vscodium/.config/VSCodium/User/CachedData/
+vscodium/.config/VSCodium/User/History/
+vscodium/.config/VSCodium/User/logs/

@@ -1,0 +1,80 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px; /* Slightly smaller for the 16px bar */
+}
+
+/* 2. REBUILD THE BAR - Thinner (18px -> 16px) */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    display: flex;
+    flex-direction: row;
+    min-height: 16px; /* Razor thin */
+    padding: 0 6px;
+}
+
+/* 3. REBUILD THE LAYOUT */
+#start, #center, #end, .box, .widget, .workspaces, .custom {
+    display: flex;
+    align-items: center;
+}
+
+/* 4. BIGGER LOGO / NO HOVER ACCENT */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px 20px; /* Logo is actually taller than the bar now */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    min-width: 32px;
+    min-height: 22px; /* Taller than the bar to make the logo pop */
+    
+    /* Removed background-color transition and hover accent */
+    background-color: transparent;
+    transition: transform 0.2s ease;
+}
+
+#launcher-button:hover {
+    background-color: transparent; /* No accent background */
+    transform: scale(1.1); /* Subtle grow effect instead of a color flash */
+}
+
+/* 5. WORKSPACES: Smooth Color Fade */
+.workspaces .item {
+    margin: 0 4px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 13px;
+    transition: color 0.3s ease-in-out;
+}
+
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 6. SLIDERS - Minimal thickness */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 2px;
+    border-radius: 10px;
+}
+
+/* 7. POPOVERS & MENUS: Absolute Flatness */
+popover, .popover, .menu, menu, menuitem {
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* 8. MODULES & BUTTONS -

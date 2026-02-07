@@ -1,0 +1,61 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* The Main Bar */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    border: none;
+    border-radius: 0; 
+    margin: 0; 
+    padding: 0 12px;
+    min-height: 24px; 
+}
+
+/* Kill the "Box" backgrounds but keep the functionality */
+#start, #center, #end, 
+.box, .widget, button {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Bring back the Slider visibility */
+scale {
+    min-height: 10px;
+}
+
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    border-radius: 4px;
+    min-height: 4px;
+}
+
+scale contents trough highlight {
+    background-color: @accent;
+    border-radius: 4px;
+}
+
+/* BIGGER LAUNCHER LOGO */
+#launcher {
+    background-image: url("file:///home/river/.icons/logo.png") !important;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+    margin-right: 10px;
+}
+
+/* WORKSPACES: Pure Color Swap */
+.workspaces .item {
+    margin: 0 10px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.2); 
+    font-size: 16px;
+    transition: color 0.

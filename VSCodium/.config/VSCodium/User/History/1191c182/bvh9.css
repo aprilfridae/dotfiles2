@@ -1,0 +1,93 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    /* This kills the font issues and the box shadows */
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-size: 14px;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+}
+
+/* 2. THE BAR - Razor thin and borderless */
+.background {
+    background-color: alpha(@bg_pill, 0.85);
+    border: none !important;
+    padding: 0 10px;
+    min-height: 22px;
+}
+
+/* 3. KILL THE GTK BOXES - Target every possible button/box state */
+button, .button, #start, #center, #end, .box, .widget, label {
+    background-color: transparent !important;
+    background-image: none !important; /* This kills the actual GTK box textures */
+    border: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* 4. BIGGER LAUNCHER LOGO */
+#launcher {
+    /* Re-apply the image specifically here */
+    background-image: url("file:///home/river/.icons/logo.png") !important;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+    margin-right: 8px;
+}
+
+/* 5. WORKSPACES - Tight spacing and pure color swap */
+.workspaces .item {
+    margin: 0 5px; /* Tightened spacing */
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25); 
+    font-size: 16px;
+}
+
+.workspaces .item.focused label {
+    color: @accent; 
+}
+
+/* 6. SLIDERS - Keep them functional without the boxes */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 4px;
+    border-radius: 2px;
+}
+scale contents trough highlight {
+    background-color: @accent;
+}
+
+/* 7. POP-OVERS - Borderless and single-layer per your request */
+popover, .popover {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* This targets the inner box to stop the "double background" look */
+popover contents {
+    background-color: alpha(@bg_pill, 0.98);
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0;
+    padding: 10px;
+    box-shadow: none !important;
+}
+
+popover arrow {
+    background: transparent !important;
+    -gtk-icon-source: none;
+}
+
+/* 8. MODULE PADDING */
+.clock {
+    font-weight: 800;
+    padding: 0 8px;
+}
+.volume, .network_manager, .bluetooth {
+    padding: 0 4px;
+}

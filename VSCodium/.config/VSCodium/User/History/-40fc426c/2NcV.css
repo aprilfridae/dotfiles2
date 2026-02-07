@@ -1,0 +1,7 @@
+/* ~/.zen/[profile]/chrome/userChrome.css */
+
+/* 1. Your Zen Mods (Glass, Animations, etc.) */
+@import url("zen-themes.css");
+
+/* 2. Your Matugen-generated PywalZen-style colors */
+@import url("matugen-vars.css");

@@ -1,0 +1,73 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 15px;
+}
+
+/* 3. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 50px;
+    min-height: 24px;
+    margin-right: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 4. WORKSPACES (Center/Left) */
+.workspaces .item {
+    margin-right: 25px;
+}
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 16px;
+}
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. THE RIGHT SIDE (#end) - THE CROWBAR FIX */
+#end {
+    margin-left: auto;
+}
+
+/* Force every single icon/text element on the right to have a 40px gap */
+#end label, 
+#end image,
+#end .tray .item,
+#end .widget,
+#end .button {
+    margin-left: 45px !important; /* The 'Crowbar' pushing everything apart */
+    font-size: 22px;              /* Keeping them BIG */
+    color: @fg_main;
+}
+
+/* Specific fix for Tray icons which often ignore parent margins */
+#end .tray .item image {
+    margin-left: 20px !important;
+}
+
+/* Ensure the Clock doesn't get too giant but stays spaced */
+.clock {
+    font-weight: 900;
+    font-size: 16px !important;
+}
+
+/* 6. POPOVERS (Keeping borderless preference) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}

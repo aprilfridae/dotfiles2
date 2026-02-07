@@ -1,0 +1,105 @@
+/* 1. THE NUCLEAR GLOBAL RESET */
+* {
+    /* Kill every possible GTK box shadow, outline, and texture */
+    box-shadow: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    background-image: none !important;
+    -gtk-icon-shadow: none !important;
+    -gtk-outline-style: none !important;
+    
+    /* Font lock */
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-size: 14px;
+}
+
+/* 2. THE BAR - Re-apply the ONLY background we want */
+.background {
+    background-color: alpha(@bg_pill, 0.85) !important;
+    margin: 0; 
+    padding: 0 10px;
+    min-height: 22px;
+}
+
+/* 3. FLATTEN EVERYTHING ELSE */
+button, .button, #start, #center, #end, .box, .widget, label {
+    background-color: transparent !important;
+    background: transparent !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* 4. BIGGER LAUNCHER LOGO */
+#launcher {
+    /* Re-inject image since global reset kills all backgrounds */
+    background-image: url("file:///home/river/.icons/logo.png") !important;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+    margin-right: 8px;
+}
+
+/* 5. WORKSPACES - Tight spacing and pure color swap */
+.workspaces .item {
+    margin: 0 5px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25); 
+    font-size: 16px;
+    /* No transitions to keep it perfectly snappy and jitter-free */
+}
+
+.workspaces .item.focused label {
+    color: @accent; 
+}
+
+/* 6. SLIDERS - Rebuilt to be visible on a flat surface */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.15) !important;
+    min-height: 4px;
+    border-radius: 2px;
+}
+scale contents trough highlight {
+    background-color: @accent !important;
+}
+/* The actual round knob */
+scale contents trough slider {
+    background-color: @accent !important;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 10px;
+}
+
+/* 7. POPOVERS - No borders, no double backgrounds */
+popover, .popover, .decoration, .menu {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Style only the inner container */
+popover contents, .popover contents {
+    background-color: alpha(@bg_pill, 0.98) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Hide the little popover triangle */
+popover arrow {
+    background: transparent !important;
+    -gtk-icon-source: none !important;
+}
+
+/* 8. MODULE PADDING */
+.clock {
+    font-weight: 800;
+    padding: 0 8px;
+}
+.volume, .network_manager, .bluetooth {
+    padding: 0 4px;
+}

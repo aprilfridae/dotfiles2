@@ -1,0 +1,46 @@
+{
+    "name": "waybar",
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "margin-top": 5,
+    "margin-left": 15,
+    "margin-right": 15,
+    "spacing": 0,
+
+    "modules-left": ["custom/launcher"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "clock"],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+    "all-outputs": true,
+    "on-click": "activate", 
+    /* "activate" usually teleports the cursor. 
+       If you want the workspace to jump to you, you may need 
+       to use a dispatch command if your version supports it: */
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 3" 
+}
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M}"
+    }
+}

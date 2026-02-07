@@ -1,0 +1,46 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+}
+
+/* This makes the actual bar background invisible */
+.background {
+    background-color: transparent;
+}/* Target the container of EVERY module to create the pill effect */
+.launcher .container,
+.workspaces .container,
+.volume .container,
+.network .container,
+.bluetooth .container,
+.clock .container,
+.tray .container {
+    background-color: @bg_pill;
+    border: 2px solid @accent;
+    border-radius: 25px;
+    margin: 5px 4px;
+    padding: 2px 12px;
+    color: @fg_main;
+}
+
+/* Launcher Icon Fix */
+.launcher .container {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 45px;
+}
+
+/* Workspaces active/inactive dots */
+.workspaces button {
+    background: transparent;
+    color: alpha(@fg_main, 0.3);
+}
+
+.workspaces button.active {
+    color: @accent;
+}

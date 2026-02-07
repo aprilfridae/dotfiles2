@@ -1,0 +1,66 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+}
+
+/* Force the window to be a ghost */
+window#waybar {
+    background: transparent;
+}
+
+/* --- THE NEW PILL DEFINITION --- */
+#workspaces, 
+#taskbar, 
+#clock, 
+#cpu, 
+#memory, 
+#pulseaudio, 
+#tray, 
+#custom-launcher {
+    background: alpha(@bg_pill, 0.6); /* Transparent Glass */
+    color: @fg_main;
+    border-radius: 16px;
+    margin: 8px 4px;
+    padding: 0px 14px;
+    border: 1px solid alpha(@accent, 0.2); /* Thin, subtle border */
+    transition: all 0.3s ease;
+}
+
+/* --- HOVER EFFECTS (The Glow) --- */
+#workspaces button:hover, #taskbar button:hover, #pulseaudio:hover {
+    background: alpha(@accent, 0.1);
+    box-shadow: inset 0 0 10px alpha(@accent, 0.1);
+}
+
+/* --- MODULE SPECIFICS --- */
+#clock {
+    color: @accent;
+    font-weight: 700;
+}
+
+#custom-launcher {
+    background-image: url("file:///home/river/.icons/logo.png"); 
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+}
+
+/* Workspace styling */
+#workspaces button {
+    color: alpha(@fg_main, 0.4);
+    padding: 0 4px;
+}
+
+#workspaces button.active {
+    color: @accent;
+}
+
+#pulseaudio.muted {
+    color: @error;
+}

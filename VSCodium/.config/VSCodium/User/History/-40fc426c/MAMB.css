@@ -1,0 +1,5 @@
+/* 1. Keep your existing Zen Mods active */
+@import url("zen-themes.css");
+
+/* 2. Inject Matugen colors on top of them */
+@import url("https://raw.githubusercontent.com/Axenide/PywalZen/main/chrome.css");

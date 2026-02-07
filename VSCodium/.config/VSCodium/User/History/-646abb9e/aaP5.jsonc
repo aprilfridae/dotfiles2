@@ -1,0 +1,48 @@
+{
+    "name": "waybar",
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "margin-top": 5,
+    "margin-left": 15,
+    "margin-right": 15,
+    "spacing": 0,
+
+    "modules-left": ["custom/launcher"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "clock"],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": false, 
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": ""
+        }
+    }, // <-- Added missing comma here
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M}"
+    }
+}

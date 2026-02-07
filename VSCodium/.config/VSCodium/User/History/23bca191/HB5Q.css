@@ -1,0 +1,46 @@
+/* Matugen GTK Theme colors */
+@define-color accent_color {{colors.primary.default.hex}};
+@define-color accent_bg_color {{colors.primary.default.hex}};
+@define-color selection_bg_color {{colors.primary.default.hex}};
+@define-color selection_fg_color {{colors.on_primary.default.hex}};
+
+@define-color window_bg_color {{colors.surface.default.hex}};
+@define-color window_fg_color {{colors.on_surface.default.hex}};
+@define-color view_bg_color {{colors.surface_container.default.hex}};
+@define-color view_fg_color {{colors.on_surface.default.hex}};
+
+@define-color headerbar_bg_color {{colors.surface_container_high.default.hex}};
+@define-color headerbar_fg_color {{colors.on_surface.default.hex}};
+
+/* Legacy/GTK3 Fallbacks */
+@define-color theme_fg_color @window_fg_color;
+@define-color theme_bg_color @window_bg_color;
+@define-color theme_view_bg_color @view_bg_color;
+@define-color theme_selected_bg_color @accent_color;
+@define-color theme_selected_fg_color @selection_fg_color;
+
+/* ... Keep your existing @define-color lines above ... */
+
+/* Thunar Specific Fixes */
+.thunar, 
+thunar-window, 
+ThunarWindow {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* Sidebar and Main View panes */
+ThunarWindow .sidebar,
+ThunarWindow .view,
+ThunarWindow .standard-view {
+    background-color: @view_bg_color;
+    color: @view_fg_color;
+}
+
+/* Fix for the path bar/toolbar area */
+ThunarWindow .toolbar,
+ThunarWindow .location-bar {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+    border: none;
+}

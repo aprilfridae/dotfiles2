@@ -1,0 +1,39 @@
+/* All-in-One SwayNC Obsidian Template */
+
+/* Matugen Colors */
+@define-color bg #131314;
+@define-color fg #e4e2e3;
+@define-color accent #bcc8d3;
+@define-color crit #ffb4ab;
+
+* {
+    font-family: "Inter", "Source Sans Pro", sans-serif;
+}
+/* Cleaned Notification-Only Template */
+.control-center {
+    background: alpha(@bg, 0.85);
+    border: 2px solid @accent;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+    color: @fg;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-clear-all {
+    background: @accent;
+    color: @bg;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* Style the individual notification cards */
+.notification {
+    background: alpha(@bg, 0.5);
+    border: 1px solid alpha(@accent, 0.3);
+    border-radius: 10px;
+    margin: 5px 0;
+}

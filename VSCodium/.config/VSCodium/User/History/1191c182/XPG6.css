@@ -1,0 +1,101 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px; /* Reduced from 14px */
+}
+
+/* 2. REBUILD THE BAR - Thinner (20px -> 18px) */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    display: flex;
+    flex-direction: row;
+    min-height: 18px; /* Ultra-thin height */
+    padding: 0 6px;
+}
+
+/* 3. REBUILD THE LAYOUT */
+#start, #center, #end, .box, .widget, .workspaces, .custom {
+    display: flex;
+    align-items: center;
+}
+
+/* 4. LAUNCHER LOGO - Scaled for 18px bar */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 14px 14px; /* Scaled down slightly */
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 28px;
+    min-height: 18px;
+    transition: background-color 0.2s ease;
+}
+
+#launcher-button:hover {
+    background-color: alpha(@accent, 0.1);
+}
+
+/* 5. WORKSPACES: Smooth Color Fade */
+.workspaces .item {
+    margin: 0 4px; /* Tighter spacing */
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 13px; /* Smaller labels */
+    transition: color 0.3s ease-in-out;
+}
+
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 6. SLIDERS - Minimal thickness */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 2px; /* Thinner slider line */
+    border-radius: 10px;
+}
+
+scale contents trough highlight {
+    background-color: @accent;
+}
+
+/* 7. POPOVERS & MENUS: Absolute Flatness (No Borders) */
+popover, .popover, .menu, menu, menuitem {
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* 8. MODULES & BUTTONS */
+.clock {
+    font-weight: 800;
+    padding: 0 6px;
+    font-size: 12px;
+}
+
+.volume, .network_manager, .bluetooth, .tray, .button, button {
+    padding: 0 4px; /* Tighter padding */
+    background: transparent;
+    border: none;
+    transition: color 0.2s ease;
+}
+
+.button, button {
+    min-width: 16px;
+    min-height: 16px;
+    cursor: pointer;
+}
+
+.button:hover, button:hover {
+    color: @accent;
+}

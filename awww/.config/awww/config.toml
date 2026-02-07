@@ -1,0 +1,3 @@
+# ~/.config/awww/config.toml
+[hooks]
+post_set = "wal -i $AWWW_WALLPAPER -n --backend colorthief && killall -SIGUSR2 waybar"

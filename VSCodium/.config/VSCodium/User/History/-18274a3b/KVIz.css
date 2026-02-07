@@ -1,0 +1,14 @@
+/* Matugen Zen Bridge */
+:root {
+    --zen-primary: {{colors.primary.default.hex}};
+    --zen-background: {{colors.surface.default.hex}};
+    --zen-sidebar: {{colors.surface_container.default.hex}};
+    --zen-text: {{colors.on_surface.default.hex}};
+    --zen-accent: {{colors.secondary.default.hex}};
+}
+
+/* Apply these to Zen's internal variables */
+#nav-bar { background-color: var(--zen-background) !important; }
+#TabsToolbar { background-color: var(--zen-background) !important; }
+#sidebar-box { background-color: var(--zen-sidebar) !important; }
+.tab-background[selected="true"] { background-color: var(--zen-primary) !important; }

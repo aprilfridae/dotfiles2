@@ -1,0 +1,41 @@
+/* 1. Force the import - make sure the path to your Matugen output is exact */
+@import url("*/colors.css");
+
+/* 2. Map Matugen's variables to Walker's GTK nodes */
+#window {
+    background: none; /* Let Hyprland handle the blur/transparency */
+}
+
+#box {
+    /* Uses Matugen's background/surface color */
+    background-color: @surface; 
+    border: 2px solid @primary;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+#search {
+    /* Uses Matugen's surface container/input color */
+    background-color: @surface_container;
+    color: @on_surface;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#item {
+    color: @on_surface;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+#item:selected {
+    /* The accent color from your wallpaper */
+    background-color: @primary; 
+    color: @on_primary;
+}
+
+#text {
+    color: inherit;
+}

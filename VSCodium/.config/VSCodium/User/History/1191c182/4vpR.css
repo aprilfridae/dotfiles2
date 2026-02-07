@@ -1,0 +1,71 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 12px;
+}
+
+/* 3. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px;
+    min-height: 24px;
+    margin-right: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 4. WORKSPACES (Left/Center) */
+.workspaces .item {
+    padding: 0 10px; /* This was the original working spacing */
+}
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 14px;
+    transition: color 0.4s ease-in-out;
+}
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. THE RIGHT SIDE (#end) - THE RESET */
+/* Instead of fighting individual icons, we space the WIDGETS */
+#end {
+    margin-left: auto; /* Pushes everything to the right */
+}
+
+/* This is how we had it when it was working: spacing the containers */
+#end .widget, 
+#end .button, 
+#end .tray {
+    margin-left: 30px; /* This creates the gap between Volume, Net, etc. */
+}
+
+/* We use a slightly smaller icon size (16px) to fit the 16px bar perfectly 
+   This prevents the "Centering" bug because the icon isn't 'choking' the bar */
+#end label, #end image {
+    font-size: 16px;
+    color: @fg_main;
+}
+
+/* 6. SYSTEM TRAY INTERNAL SPACING */
+.tray .item {
+    margin-left: 12px;
+}
+
+/* 7. POPOVERS (Keeping borderless preference) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    border: none !important;
+    box-shadow: none !important;
+}

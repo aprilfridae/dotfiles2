@@ -1,0 +1,22 @@
+# ~/.config/ironbar/config.toml
+
+[monitors.default]
+position = "top"
+height = 34 # Adjusted to account for your 24px + margins
+margin_top = 5
+margin_left = 15
+margin_right = 15
+
+start = [
+  { type = "custom", name = "launcher", content = " ", on_click_left = "walker" }
+]
+
+center = [
+  { type = "workspaces", all_outputs = false }
+]
+
+end = [
+  { type = "tray" },
+  { type = "volume", format = "{icon} {percentage}%", on_click_right = "pavucontrol" },
+  { type = "clock", format = "󱑂 %H:%M" }
+]

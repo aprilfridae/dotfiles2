@@ -1,0 +1,51 @@
+{
+    "name": "waybar",
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "margin-top": 8,
+    "margin-left": 15, // Match your Hyprland gaps_out
+    "margin-right": 15,
+    "spacing": 0,
+
+    // We put everything in center to create ONE unified pill
+    "modules-left": [],
+    "modules-center": ["custom/launcher", "hyprland/workspaces", "tray", "pulseaudio", "clock"],
+    "modules-right": [],
+
+    "custom/launcher": {
+        "format": " ", 
+        "on-click": "walker",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󱓻",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    }
+}x

@@ -1,0 +1,78 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 15px;
+}
+
+/* 3. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 50px; /* Forced wider hitbox */
+    min-height: 24px;
+    margin-right: 40px; /* Push workspaces away */
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 4. WORKSPACES (Center/Left) */
+.workspaces .item {
+    margin-right: 25px; /* Forced gap between dots */
+}
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 16px;
+}
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. THE RIGHT SIDE (#end) - THE SPACING FIX */
+/* This forces the entire right-side block to the far right edge */
+#end {
+    margin-left: auto; 
+    display: flex;
+}
+
+/* We target the direct children of the end container */
+#end > .widget, 
+#end > .button, 
+#end > .tray,
+#end > .custom {
+    margin-left: 50px !important; /* MASSIVE 50px gap between modules */
+    min-width: 40px;              /* Forces the "box" to be wide */
+}
+
+/* Internal tray icon spacing */
+.tray .item {
+    margin-left: 20px;
+}
+
+/* 6. ICON SIZING */
+#end label, #end image {
+    font-size: 22px; 
+    color: @fg_main;
+}
+
+.clock {
+    font-weight: 900;
+    font-size: 16px;
+    color: @fg_main;
+}
+
+/* 7. POPOVERS (Keeping borderless preference) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    border: none !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,45 @@
+/* Matugen Codium Bridge */
+@define-color bg_color {{colors.surface.default.hex}};
+@define-color fg_color {{colors.on_surface.default.hex}};
+@define-color accent_color {{colors.primary.default.hex}};
+@define-color border_color {{colors.outline.default.hex}};
+
+/* UI Elements */
+.monaco-workbench {
+    background-color: @bg_color !important;
+    color: @fg_color !important;
+}
+
+/* Sidebar & Activity Bar */
+.part.sidebar, 
+.part.activitybar {
+    background-color: darker(@bg_color) !important;
+    border-right: 1px solid alpha(@accent_color, 0.2) !important;
+}
+
+/* Editor Area - Making it slightly "Obsidian" transparent */
+.monaco-editor, 
+.monaco-editor .margin, 
+.monaco-editor-background {
+    background-color: alpha(@bg_color, 0.9) !important;
+}
+
+/* Tabs */
+.tab.active {
+    background-color: alpha(@accent_color, 0.2) !important;
+    border-bottom: 2px solid @accent_color !important;
+}
+
+/* Status Bar */
+.part.statusbar {
+    background-color: @accent_color !important;
+    color: {{colors.on_primary.default.hex}} !important;
+}
+
+/* Popover / Menus (No Borders as requested) */
+.monaco-menu-container, 
+.context-view.fixed {
+    background-color: lighter(@bg_color) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}

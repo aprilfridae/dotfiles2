@@ -1,0 +1,18 @@
+/* This targets the literal root of the window */
+:root,
+#main-window,
+#browser-panel,
+#tabbrowser-tabpanels,
+#tabbrowser-tabpanels > .deck-selected,
+.browserContainer,
+browser[type="content-primary"],
+browser {
+    background: transparent !important;
+    -moz-appearance: none !important;
+    background-color: transparent !important;
+}
+
+/* Kills the white flash when loading pages */
+#tabbrowser-tabpanels {
+    background-color: transparent !important;
+}

@@ -1,0 +1,32 @@
+position = "top"
+height = 45
+anchor_to_edges = true
+margin_top = 60
+margin_start = 20
+margin_end = 20
+
+[[start]]
+type = "custom"
+name = "launcher"
+bar = [
+    { type = "button", name = "launcher-button", label = "", on_click_left = "walker" }
+]
+
+[[start]]
+type = "clock"
+format = "%I:%M %p"
+on_click_left = "none"
+
+[[center]]
+type = "workspaces"
+all_monitors = false
+# This is the magic line. It completely drops the workspace from the bar's logic.
+ignore_list = ["special:magic"]
+name_map = { "1" = "●", "2" = "●", "3" = "●", "4" = "●", "5" = "●", "6" = "●", "7" = "●", "8" = "●", "9" = "●", "10" = "●" }
+
+[[end]]
+type = "custom"
+bar = [
+    { type = "button", label = "󱐥", on_click_left = "kitty --class SystemTray -o confirm_os_window_close=0 sh -c 'tray-tui; exit'" },
+    { type = "button", label = "󰕾", on_click_left = "kitty --class AudioMixer -o confirm_os_window_close=0 sh -c 'ncpamixer; exit'" }
+]

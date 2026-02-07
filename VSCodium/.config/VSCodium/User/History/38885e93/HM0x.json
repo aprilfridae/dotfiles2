@@ -1,0 +1,32 @@
+{
+  "terminal": "kitty",
+  "orientation": "vertical",
+  "placeholder": "Search...",
+  "notify_on_copy": true,
+  "show_initial_entries": true,
+  "ui": {
+    "width": 450,
+    "height": 500,
+    "fullscreen": false,
+    "ignore_exclusive": true,
+    "show_scroll_bar": false
+  },
+  "modules": [
+    {
+      "name": "applications",
+      "type": "applications",
+      "prefix": ""
+    },
+    {
+      "name": "runner",
+      "type": "sh",
+      "prefix": "!"
+    }
+  ],
+  "external_modules": [
+    {
+      "name": "elephant",
+      "command": "elephant"
+    }
+  ]
+}

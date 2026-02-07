@@ -1,0 +1,120 @@
+@import url("../../.cache/matugen/swaync.css");
+
+* {
+    font-family: "Inter", "Source Sans Pro", sans-serif;
+}
+
+/* Notification Window (Popups) */
+.notification-row {
+    outline: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.notification {
+    background: rgba(@bg, 0.8); /* Fix: alpha -> rgba */
+    border: 2px solid @accent;
+    border-radius: 12px;
+    color: @fg;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Critical Notifications */
+.notification.critical {
+    border: 2px solid @crit;
+}
+
+.notification-content {
+    margin-top: 5px;
+}
+
+.notification-default-action {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Control Center (The Side Panel) */
+.control-center {
+    background: rgba(@bg, 0.9); /* Fix: alpha -> rgba */
+    border: 2px solid @accent;
+    color: @fg;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Clear All Button */
+.control-center-clear-all {
+    background: @accent;
+    color: @bg;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.control-center-clear-all:hover {
+    background: rgba(@accent, 0.8); /* Fix: alpha -> rgba */
+}
+
+/* Buttons and Toggles */
+.widget-title > button {
+    background: @accent;
+    color: @bg;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Sliders */
+.widget-volume, .widget-backlight {
+    background: rgba(@bg, 0.5); /* Fix: alpha -> rgba */
+    border: 2px solid @accent;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+}
+
+trough {
+    background: rgba(@fg, 0.1); /* Fix: alpha -> rgba */
+    border-radius: 10px;
+    min-height: 10px;
+}
+
+highlight {
+    background: @accent;
+    border-radius: 10px;
+}
+
+/* Music Player */
+.widget-mpris {
+    background: rgba(@bg, 0.5); /* Fix: alpha -> rgba */
+    border: 2px solid @accent;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.widget-mpris-player {
+    padding: 5px;
+}
+
+.widget-mpris-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.widget-mpris-subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+}

@@ -1,0 +1,20 @@
+/* Replace the old Pywal import with this */
+@import "/home/river/.cache/matugen/colors-wofi.css";
+
+#window {
+    background-color: @background;
+    color: @foreground;
+    font-family: "JetBrainsMono Nerd Font"; /* Or your preferred font */
+}
+
+#entry:selected {
+    background-color: @selection;
+    color: @on-selection;
+    border-radius: 5px;
+}
+
+#input {
+    background-color: @selection;
+    color: @foreground;
+    border: 2px solid @primary;
+}

@@ -1,0 +1,36 @@
+/* Matugen variables generated from your wallpaper */
+@define-color accent {{colors.primary.default.hex}};
+@define-color bg {{colors.surface.default.hex}};
+@define-color fg {{colors.on_surface.default.hex}};
+@define-color selected-bg {{colors.primary_container.default.hex}};
+@define-color selected-fg {{colors.on_primary_container.default.hex}};
+
+/* Layout and Structure */
+#window {
+    background: none;
+}
+
+#box {
+    background-color: alpha(@bg, 0.9);
+    border: 2px solid @accent;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+#search {
+    background-color: alpha(@selected-bg, 0.3);
+    color: @fg;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#item:selected {
+    background-color: @selected-bg;
+    color: @selected-fg;
+    border-radius: 6px;
+}
+
+#text {
+    color: @fg;
+}

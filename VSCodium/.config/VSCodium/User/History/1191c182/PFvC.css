@@ -1,0 +1,87 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 10px;
+}
+
+/* 3. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 36px;
+    min-height: 24px;
+    margin-right: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 4. WORKSPACES - Restored Animation & Accent */
+.workspaces .item {
+    margin: 0 6px;
+}
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 14px;
+    transition: color 0.4s ease-in-out;
+}
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. THE RIGHT SIDE (#end) - Fixed Spacing */
+#end .widget, #end .button, #end .tray {
+    margin-left: 24px; /* Big gap between modules */
+}
+
+/* Space between icons INSIDE the tray */
+.tray .item {
+    margin-left: 14px;
+}
+
+#end label, #end image {
+    font-size: 16px;
+}
+
+.clock {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/* 6. FIXED ACCENT HOVER - The "Everything Works" Version */
+/* This targets the widgets directly but excludes the Tray container */
+
+.clock:hover,
+#end .widget:hover,
+#end .button:hover,
+button:hover {
+    color: @accent;
+    transition: color 0.2s ease;
+}
+
+/* Special Tray Handling: Only color the specific icon being touched */
+/* This prevents the "Whole Tray + Volume" double-hover */
+.tray:hover {
+    color: inherit; /* Keeps the container neutral */
+}
+
+.tray .item:hover {
+    color: @accent; /* Only the icon under the mouse turns color */
+}
+
+/* 7. POPOVERS (Keeping borderless preference) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}

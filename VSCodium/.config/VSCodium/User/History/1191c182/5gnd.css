@@ -1,0 +1,82 @@
+/* 1. THE NUCLEAR RESET */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* 2. THE BAR - 16px Height */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    min-height: 16px; 
+    padding: 0 10px;
+}
+
+/* 3. BIG LOGO (Left) */
+#launcher-button {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40px; /* Wider hit-box */
+    min-height: 24px;
+    margin-right: 20px; /* Big gap after logo */
+    transition: transform 0.2s ease-in-out;
+}
+#launcher-button:hover { transform: scale(1.15); }
+
+/* 4. WORKSPACES - Spaced out */
+.workspaces .item {
+    padding: 0 10px; /* More room for each dot/number */
+}
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 14px;
+    transition: color 0.4s ease-in-out;
+}
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 5. THE RIGHT SIDE (#end) - Fixed the "Squeezed" weirdness */
+/* We apply padding to the widgets themselves to push them apart */
+#end .widget, 
+#end .button, 
+#end .tray {
+    padding-left: 25px; /* Forced physical gap between modules */
+}
+
+/* Internal tray icon spacing */
+.tray .item {
+    padding-left: 15px;
+}
+
+#end label, #end image {
+    font-size: 17px; /* Sized up icons */
+}
+
+.clock {
+    font-weight: 900;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+/* 6. HOVER ACCENT - Isolated */
+/* Only the specific thing you touch turns color */
+.clock:hover,
+#end .widget:hover label,
+#end .widget:hover image,
+#end .button:hover label,
+#end .tray .item:hover image,
+#end .tray .item:hover label {
+    color: @accent;
+    transition: color 0.2s ease;
+}
+
+/* 7. POPOVERS (Keeping borderless preference) */
+popover contents, .menu, .decoration {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+}

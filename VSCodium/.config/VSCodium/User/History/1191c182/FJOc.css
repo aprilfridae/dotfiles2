@@ -1,0 +1,86 @@
+/* 1. THE NUCLEAR RESET - This kills EVERYTHING GTK draws by default */
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+/* 2. REBUILD THE BAR */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    display: flex;
+    flex-direction: row;
+    min-height: 24px;
+    padding: 0 10px;
+}
+
+/* 3. REBUILD THE LAYOUT (Since 'unset' killed flex) */
+#start, #center, #end, .box, .widget, .workspaces {
+    display: flex;
+    align-items: center;
+}
+
+/* 4. BIGGER LAUNCHER LOGO */
+#launcher {
+    background-image: url("file:///home/river/.icons/logo.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+    margin-right: 10px;
+}
+
+/* 5. WORKSPACES: Static Color Swap */
+.workspaces .item {
+    margin: 0 8px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.25);
+    font-size: 16px;
+}
+
+.workspaces .item.focused label {
+    color: @accent;
+}
+
+/* 6. SLIDERS: Rebuilding the volume/brightness bars from scratch */
+scale {
+    min-width: 80px;
+    margin: 0 10px;
+}
+
+scale contents trough {
+    background-color: alpha(@fg_main, 0.1);
+    min-height: 4px;
+    border-radius: 10px;
+}
+
+scale contents trough highlight {
+    background-color: @accent;
+    border-radius: 10px;
+}
+
+/* 7. POPOVERS: No borders, no double backgrounds */
+popover {
+    background: transparent;
+}
+
+popover contents {
+    background-color: alpha(@bg_pill, 0.98);
+    padding: 12px;
+    /* Per your saved info: No borders/shadows/junk */
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* 8. MODULES */
+.clock {
+    font-weight: 800;
+    padding: 0 10px;
+}
+
+.volume, .network_manager, .bluetooth {
+    padding: 0 6px;
+}

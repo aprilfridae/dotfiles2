@@ -1,0 +1,65 @@
+@import "colors.css";
+
+* {
+    font-family: "Google Sans Code", "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* THE MAIN PILL */
+window#waybar > box {
+    background-color: alpha(@bg_pill, 0.6); 
+    border: 2px solid @accent;
+    border-radius: 25px;
+    
+    /* Internal spacing - Adjust the 20px to make it wider or thinner */
+    padding: 5px 20px; 
+    
+    /* This makes the box expand to the edges defined in the JSON */
+    margin: 0; 
+    
+    background-clip: padding-box;
+}
+
+/* Pushes content to the far left and far right */
+.modules-left {
+    padding-left: 5px;
+}
+
+.modules-right {
+    padding-right: 5px;
+}
+
+/* Center the workspaces exactly */
+.modules-center {
+    margin: 0;
+}
+
+#custom-launcher {
+    background-image: url("/home/river/.icons/logo.png"); 
+    background-size: 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 50px;
+}
+
+#workspaces button {
+    color: alpha(@fg_main, 0.6);
+    padding: 0 15px;
+}
+
+#workspaces button.active {
+    color: @accent;
+    background: alpha(@accent, 0.2);
+    border-radius: 20px;
+}
+
+#tray, #pulseaudio, #clock {
+    padding: 0 12px;
+}

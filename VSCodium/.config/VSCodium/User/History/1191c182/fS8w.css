@@ -1,0 +1,94 @@
+/* Lock font and kill global shadows */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -gtk-icon-shadow: none !important;
+}
+
+/* Thin, borderless bar */
+.background {
+    background-color: alpha(@bg_pill, 0.8);
+    border: none;
+    border-radius: 0; 
+    margin: 0; 
+    padding: 0 12px;
+    min-height: 22px; 
+}
+
+/* Nuke all GTK internal boxes/buttons */
+#start, #center, #end, button, box, widget, label {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* BIGGER LAUNCHER LOGO */
+#launcher {
+    background-image: url("file:///home/river/.icons/logo.png") !important;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 32px;
+    margin-right: 10px;
+}
+
+/* WORKSPACES: Pure Color Swap (Zero Jitter) */
+.workspaces .item {
+    margin: 0 8px;
+}
+
+.workspaces .item label {
+    color: alpha(@fg_main, 0.2); 
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.workspaces .item.focused label {
+    color: @accent; 
+}
+
+/* Modules */
+.clock {
+    font-weight: 800;
+    padding: 0 10px;
+}
+
+.volume, .network_manager, .bluetooth {
+    padding: 0 6px;
+}
+
+/* SLIDERS: Keeping them visible */
+scale contents trough {
+    background-color: alpha(@fg_main, 0.15);
+    min-height: 4px;
+    border-radius: 2px;
+}
+scale contents trough highlight {
+    background-color: @accent;
+}
+
+/* POP-OVERS: Strictly borderless, no double background, no shadows */
+popover, .popover, .decoration {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+popover > contents, .popover > contents {
+    background-color: alpha(@bg_pill, 0.95);
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    padding: 10px;
+    margin: 0;
+}
+
+popover arrow {
+    background: transparent !important;
+    -gtk-icon-source: none !important;
+}
